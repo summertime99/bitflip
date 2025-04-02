@@ -1,0 +1,127 @@
+Set seed 666
+GNNStack_INT8_2(
+  (convs): ModuleList(
+    (0): GINConv(nn=Sequential(
+      (0): Linear(in_features=492, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=128, bias=True)
+    ))
+    (1-2): 2 x GINConv(nn=Sequential(
+      (0): Linear(in_features=128, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=128, bias=True)
+    ))
+  )
+  (norm): ModuleList(
+    (0-1): 2 x BatchNorm(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (post_mp): Sequential(
+    (0): Linear8bitLt(in_features=256, out_features=128, bias=True)
+    (1): Dropout(p=0.25, inplace=False)
+    (2): Linear8bitLt(in_features=128, out_features=2, bias=True)
+  )
+)
+[+] Done Load Clean Model
+GNNStack_INT8_2(
+  (convs): ModuleList(
+    (0): GINConv(nn=Sequential(
+      (0): Linear(in_features=492, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=128, bias=True)
+    ))
+    (1-2): 2 x GINConv(nn=Sequential(
+      (0): Linear(in_features=128, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=128, bias=True)
+    ))
+  )
+  (norm): ModuleList(
+    (0-1): 2 x BatchNorm(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (post_mp): Sequential(
+    (0): my_8bit_linear(
+      (ori_bnb_linear): Linear8bitLt(in_features=256, out_features=128, bias=True)
+    )
+    (1): Dropout(p=0.25, inplace=False)
+    (2): my_8bit_linear(
+      (ori_bnb_linear): Linear8bitLt(in_features=128, out_features=2, bias=True)
+    )
+  )
+)
+[+] Done Replace Model
+Parameter containing:
+tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0.], requires_grad=True)
+[+] Done Load Trigger
+aux, val , load
+[+] Done Process Dataset, aux_apk:512,aux_ben_subgraph:858,aux_mal_subgraph:429,val_apk_num:512
+16 240 232 24 92 164 0.921875 0.09375 0.640625
+[+] Attack effect before bitflip
+[+] ext_epoch:0. Subgraph Level Data, trigger malware loss:-0.051771070808172226 malware loss:0.024383554235100746, benign loss:0.053904447704553604
+[+] ext_epoch:0. Subgraph Level Data, trigger malware acc:0.15151515151515152 malware acc:1.0, benign acc:1.0
+Single absmax time used:48.25
+Single absmax time used:49.89
+Single absmax time used:53.86
+Single absmax time used:21.50
+Single absmax time used:38.23
+Single absmax time used:61.41
+Single absmax time used:50.71
+Single absmax time used:43.06
+Single absmax time used:49.05
+Single absmax time used:55.85
+Check filp absmax finish. Flip absmax or not:True
+[+] change post_mp.2@0@0@absmax, loss: -0.01942945271730423
+256 0 228 28 245 11 0.4453125 0.109375 0.04296875
+[+] Flip 1 bit: ['post_mp.2@0@0@absmax']
+[+] ext_epoch:1. Subgraph Level Data, trigger malware loss:0.0013541715452447534 malware loss:-0.009017359465360641, benign loss:-0.0036412363406270742
+[+] ext_epoch:1. Subgraph Level Data, trigger malware acc:0.7086247086247086 malware acc:0.0, benign acc:0.10372960372960373
+Single absmax time used:47.56
+Single absmax time used:48.97
+Single absmax time used:44.28
+Single absmax time used:49.36
+Single absmax time used:27.57
+Single absmax time used:53.77
+Single absmax time used:66.74
+Single absmax time used:33.10
+Single absmax time used:44.24
+Single absmax time used:54.26
+Check filp absmax finish. Flip absmax or not:True
+[+] change post_mp.2@0@1@absmax, loss: -2.4696969985961914
+256 0 234 22 249 7 0.45703125 0.0859375 0.02734375
+[+] Flip 2 bit: ['post_mp.2@0@0@absmax', 'post_mp.2@0@1@absmax']
+[+] ext_epoch:2. Subgraph Level Data, trigger malware loss:0.29487180709838867 malware loss:-0.5, benign loss:-0.49533799290657043
+[+] ext_epoch:2. Subgraph Level Data, trigger malware acc:0.7948717948717948 malware acc:0.0, benign acc:0.004662004662004662
+Single absmax time used:91.51
+Single absmax time used:87.62
+Single absmax time used:86.97
+Single absmax time used:86.50
+Single absmax time used:87.68
+Single absmax time used:96.72
+Single absmax time used:89.82
+Single absmax time used:86.93
+Single absmax time used:96.77
+Single absmax time used:94.50
+Check filp absmax finish. Flip absmax or not:True
+[+] change post_mp.0@4@1@absmax, loss: -2.73543119430542
+256 0 237 19 250 6 0.462890625 0.07421875 0.0234375
+[+] Flip 3 bit: ['post_mp.2@0@0@absmax', 'post_mp.2@0@1@absmax', 'post_mp.0@4@1@absmax']
+[+] ext_epoch:3. Subgraph Level Data, trigger malware loss:0.3764568865299225 malware loss:-0.36480188369750977, benign loss:-0.4883449971675873
+[+] ext_epoch:3. Subgraph Level Data, trigger malware acc:0.8764568764568764 malware acc:0.1351981351981352, benign acc:0.011655011655011656
+Single absmax time used:92.94
+Single absmax time used:94.25
+Single absmax time used:94.26
+Single absmax time used:92.06
+Single absmax time used:87.89
+Single absmax time used:86.93
+Single absmax time used:88.72

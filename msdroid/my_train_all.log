@@ -1,0 +1,822 @@
+Set seed: 666
+Train set size:12080, Test set size:3022
+Sample of train set
+[Data(data=[7]), Data(data=[20]), Data(data=[17]), Data(data=[19]), Data(data=[9]), Data(data=[19]), Data(data=[18]), Data(data=[20]), Data(data=[13]), Data(data=[16])]
+Sample of Test set
+[Data(data=[1]), Data(data=[2]), Data(data=[7]), Data(data=[11]), Data(data=[14]), Data(data=[15]), Data(data=[17]), Data(data=[30]), Data(data=[14]), Data(data=[12])]
+Start Training
+Epoch: 0, Train Start
+Time Used: 60.05s, Loss: 21.1152
+TP:3181; FP:4128; TN:3800; FN:971
+Presicion:0.435, Recall:0.766, Acc:0.578
+Test Start
+Time Used: 12.40s, Loss: 44.4735
+TP:47; FP:18; TN:1965; FN:992
+Presicion:0.723, Recall:0.045, Acc:0.666
+Model Saved
+Epoch: 1, Train Start
+Time Used: 60.79s, Loss: 12.5447
+TP:3776; FP:3359; TN:4569; FN:376
+Presicion:0.529, Recall:0.909, Acc:0.691
+Test Start
+Time Used: 12.57s, Loss: 24.6122
+TP:342; FP:90; TN:1893; FN:697
+Presicion:0.792, Recall:0.329, Acc:0.740
+Model Saved
+Epoch: 2, Train Start
+Time Used: 59.71s, Loss: 10.9522
+TP:3821; FP:3020; TN:4908; FN:331
+Presicion:0.559, Recall:0.920, Acc:0.723
+Test Start
+Time Used: 14.01s, Loss: 23.7867
+TP:437; FP:298; TN:1685; FN:602
+Presicion:0.595, Recall:0.421, Acc:0.702
+Model Saved
+Epoch: 3, Train Start
+Time Used: 57.84s, Loss: 11.0514
+TP:3753; FP:2586; TN:5342; FN:399
+Presicion:0.592, Recall:0.904, Acc:0.753
+Test Start
+Time Used: 13.53s, Loss: 26.5874
+TP:489; FP:152; TN:1831; FN:550
+Presicion:0.763, Recall:0.471, Acc:0.768
+Epoch: 4, Train Start
+Time Used: 63.38s, Loss: 9.0248
+TP:3868; FP:2318; TN:5610; FN:284
+Presicion:0.625, Recall:0.932, Acc:0.785
+Test Start
+Time Used: 13.17s, Loss: 21.0317
+TP:465; FP:244; TN:1739; FN:574
+Presicion:0.656, Recall:0.448, Acc:0.729
+Model Saved
+Epoch: 5, Train Start
+Time Used: 57.13s, Loss: 9.3689
+TP:3848; FP:2367; TN:5561; FN:304
+Presicion:0.619, Recall:0.927, Acc:0.779
+Test Start
+Time Used: 13.77s, Loss: 32.0420
+TP:334; FP:65; TN:1918; FN:705
+Presicion:0.837, Recall:0.321, Acc:0.745
+Epoch: 6, Train Start
+Time Used: 56.84s, Loss: 9.7906
+TP:3791; FP:2305; TN:5623; FN:361
+Presicion:0.622, Recall:0.913, Acc:0.779
+Test Start
+Time Used: 12.12s, Loss: 16.9156
+TP:651; FP:96; TN:1887; FN:388
+Presicion:0.871, Recall:0.627, Acc:0.840
+Model Saved
+Epoch: 7, Train Start
+Time Used: 60.79s, Loss: 7.2943
+TP:3885; FP:1769; TN:6159; FN:267
+Presicion:0.687, Recall:0.936, Acc:0.831
+Test Start
+Time Used: 12.01s, Loss: 13.4928
+TP:788; FP:118; TN:1865; FN:251
+Presicion:0.870, Recall:0.758, Acc:0.878
+Model Saved
+Epoch: 8, Train Start
+Time Used: 57.49s, Loss: 7.5075
+TP:3886; FP:2022; TN:5906; FN:266
+Presicion:0.658, Recall:0.936, Acc:0.811
+Test Start
+Time Used: 12.54s, Loss: 12.6679
+TP:756; FP:110; TN:1873; FN:283
+Presicion:0.873, Recall:0.728, Acc:0.870
+Model Saved
+Epoch: 9, Train Start
+Time Used: 59.39s, Loss: 7.2580
+TP:3881; FP:1773; TN:6155; FN:271
+Presicion:0.686, Recall:0.935, Acc:0.831
+Test Start
+Time Used: 23.58s, Loss: 12.8577
+TP:748; FP:144; TN:1839; FN:291
+Presicion:0.839, Recall:0.720, Acc:0.856
+Epoch: 10, Train Start
+Time Used: 60.04s, Loss: 7.0908
+TP:3915; FP:1899; TN:6029; FN:237
+Presicion:0.673, Recall:0.943, Acc:0.823
+Test Start
+Time Used: 12.66s, Loss: 13.3195
+TP:762; FP:152; TN:1831; FN:277
+Presicion:0.834, Recall:0.733, Acc:0.858
+Epoch: 11, Train Start
+Time Used: 65.29s, Loss: 6.4950
+TP:3918; FP:1746; TN:6182; FN:234
+Presicion:0.692, Recall:0.944, Acc:0.836
+Test Start
+Time Used: 13.56s, Loss: 14.3571
+TP:725; FP:82; TN:1901; FN:314
+Presicion:0.898, Recall:0.698, Acc:0.869
+Epoch: 12, Train Start
+Time Used: 68.87s, Loss: 6.0180
+TP:3934; FP:1602; TN:6326; FN:218
+Presicion:0.711, Recall:0.947, Acc:0.849
+Test Start
+Time Used: 12.82s, Loss: 13.0440
+TP:786; FP:111; TN:1872; FN:253
+Presicion:0.876, Recall:0.756, Acc:0.880
+Epoch: 13, Train Start
+Time Used: 57.28s, Loss: 6.5494
+TP:3939; FP:1693; TN:6235; FN:213
+Presicion:0.699, Recall:0.949, Acc:0.842
+Test Start
+Time Used: 11.71s, Loss: 37.6404
+TP:335; FP:69; TN:1914; FN:704
+Presicion:0.829, Recall:0.322, Acc:0.744
+Epoch: 14, Train Start
+Time Used: 53.89s, Loss: 6.1843
+TP:3938; FP:1845; TN:6083; FN:214
+Presicion:0.681, Recall:0.948, Acc:0.830
+Test Start
+Time Used: 11.74s, Loss: 34.5550
+TP:371; FP:56; TN:1927; FN:668
+Presicion:0.869, Recall:0.357, Acc:0.760
+Epoch: 15, Train Start
+Time Used: 58.44s, Loss: 5.7345
+TP:3948; FP:1593; TN:6335; FN:204
+Presicion:0.713, Recall:0.951, Acc:0.851
+Test Start
+Time Used: 11.97s, Loss: 28.2590
+TP:227; FP:21; TN:1962; FN:812
+Presicion:0.915, Recall:0.218, Acc:0.724
+Epoch: 16, Train Start
+Time Used: 54.54s, Loss: 5.6892
+TP:3948; FP:1571; TN:6357; FN:204
+Presicion:0.715, Recall:0.951, Acc:0.853
+Test Start
+Time Used: 12.00s, Loss: 9.2732
+TP:872; FP:128; TN:1855; FN:167
+Presicion:0.872, Recall:0.839, Acc:0.902
+Model Saved
+Epoch: 17, Train Start
+Time Used: 54.61s, Loss: 5.2825
+TP:3968; FP:1522; TN:6406; FN:184
+Presicion:0.723, Recall:0.956, Acc:0.859
+Test Start
+Time Used: 12.08s, Loss: 14.1205
+TP:763; FP:78; TN:1905; FN:276
+Presicion:0.907, Recall:0.734, Acc:0.883
+Epoch: 18, Train Start
+Time Used: 58.96s, Loss: 4.6176
+TP:3969; FP:1333; TN:6595; FN:183
+Presicion:0.749, Recall:0.956, Acc:0.875
+Test Start
+Time Used: 12.16s, Loss: 24.3539
+TP:356; FP:22; TN:1961; FN:683
+Presicion:0.942, Recall:0.343, Acc:0.767
+Epoch: 19, Train Start
+Time Used: 56.64s, Loss: 4.4448
+TP:3993; FP:1224; TN:6704; FN:159
+Presicion:0.765, Recall:0.962, Acc:0.886
+Test Start
+Time Used: 12.11s, Loss: 11.6292
+TP:833; FP:90; TN:1893; FN:206
+Presicion:0.902, Recall:0.802, Acc:0.902
+Epoch: 20, Train Start
+Time Used: 57.50s, Loss: 5.5877
+TP:3953; FP:1319; TN:6609; FN:199
+Presicion:0.750, Recall:0.952, Acc:0.874
+Test Start
+Time Used: 13.32s, Loss: 16.1253
+TP:777; FP:94; TN:1889; FN:262
+Presicion:0.892, Recall:0.748, Acc:0.882
+Epoch: 21, Train Start
+Time Used: 65.77s, Loss: 4.9269
+TP:3952; FP:1199; TN:6729; FN:200
+Presicion:0.767, Recall:0.952, Acc:0.884
+Test Start
+Time Used: 12.36s, Loss: 15.4357
+TP:810; FP:110; TN:1873; FN:229
+Presicion:0.880, Recall:0.780, Acc:0.888
+Epoch: 22, Train Start
+Time Used: 61.35s, Loss: 3.9836
+TP:3981; FP:1026; TN:6902; FN:171
+Presicion:0.795, Recall:0.959, Acc:0.901
+Test Start
+Time Used: 12.41s, Loss: 24.1325
+TP:707; FP:52; TN:1931; FN:332
+Presicion:0.931, Recall:0.680, Acc:0.873
+Epoch: 23, Train Start
+Time Used: 68.47s, Loss: 4.4318
+TP:3995; FP:1310; TN:6618; FN:157
+Presicion:0.753, Recall:0.962, Acc:0.879
+Test Start
+Time Used: 22.02s, Loss: 15.2463
+TP:794; FP:54; TN:1929; FN:245
+Presicion:0.936, Recall:0.764, Acc:0.901
+Epoch: 24, Train Start
+Time Used: 57.82s, Loss: 4.1156
+TP:3979; FP:1165; TN:6763; FN:173
+Presicion:0.774, Recall:0.958, Acc:0.889
+Test Start
+Time Used: 12.68s, Loss: 14.3421
+TP:744; FP:52; TN:1931; FN:295
+Presicion:0.935, Recall:0.716, Acc:0.885
+Epoch: 25, Train Start
+Time Used: 73.00s, Loss: 5.4238
+TP:3974; FP:1615; TN:6313; FN:178
+Presicion:0.711, Recall:0.957, Acc:0.852
+Test Start
+Time Used: 13.15s, Loss: 42.8260
+TP:322; FP:42; TN:1941; FN:717
+Presicion:0.885, Recall:0.310, Acc:0.749
+Epoch: 26, Train Start
+Time Used: 65.73s, Loss: 5.4240
+TP:3946; FP:1406; TN:6522; FN:206
+Presicion:0.737, Recall:0.950, Acc:0.867
+Test Start
+Time Used: 12.39s, Loss: 27.0764
+TP:557; FP:51; TN:1932; FN:482
+Presicion:0.916, Recall:0.536, Acc:0.824
+Epoch: 27, Train Start
+Time Used: 61.89s, Loss: 5.0339
+TP:3956; FP:1228; TN:6700; FN:196
+Presicion:0.763, Recall:0.953, Acc:0.882
+Test Start
+Time Used: 13.70s, Loss: 19.6334
+TP:792; FP:98; TN:1885; FN:247
+Presicion:0.890, Recall:0.762, Acc:0.886
+Epoch: 28, Train Start
+Time Used: 59.50s, Loss: 4.2797
+TP:3980; FP:1362; TN:6566; FN:172
+Presicion:0.745, Recall:0.959, Acc:0.873
+Test Start
+Time Used: 12.37s, Loss: 12.6233
+TP:790; FP:53; TN:1930; FN:249
+Presicion:0.937, Recall:0.760, Acc:0.900
+Epoch: 29, Train Start
+Time Used: 73.34s, Loss: 4.1689
+TP:3994; FP:1238; TN:6690; FN:158
+Presicion:0.763, Recall:0.962, Acc:0.884
+Test Start
+Time Used: 14.74s, Loss: 24.0196
+TP:747; FP:62; TN:1921; FN:292
+Presicion:0.923, Recall:0.719, Acc:0.883
+Epoch: 30, Train Start
+Time Used: 58.73s, Loss: 3.8422
+TP:4001; FP:1182; TN:6746; FN:151
+Presicion:0.772, Recall:0.964, Acc:0.890
+Test Start
+Time Used: 13.91s, Loss: 26.8816
+TP:615; FP:55; TN:1928; FN:424
+Presicion:0.918, Recall:0.592, Acc:0.841
+Epoch: 31, Train Start
+Time Used: 69.00s, Loss: 3.6364
+TP:4023; FP:1084; TN:6844; FN:129
+Presicion:0.788, Recall:0.969, Acc:0.900
+Test Start
+Time Used: 14.16s, Loss: 11.2152
+TP:847; FP:94; TN:1889; FN:192
+Presicion:0.900, Recall:0.815, Acc:0.905
+Epoch: 32, Train Start
+Time Used: 59.58s, Loss: 3.5167
+TP:4017; FP:959; TN:6969; FN:135
+Presicion:0.807, Recall:0.967, Acc:0.909
+Test Start
+Time Used: 11.95s, Loss: 10.4323
+TP:832; FP:80; TN:1903; FN:207
+Presicion:0.912, Recall:0.801, Acc:0.905
+Epoch: 33, Train Start
+Time Used: 58.80s, Loss: 3.2422
+TP:4025; FP:974; TN:6954; FN:127
+Presicion:0.805, Recall:0.969, Acc:0.909
+Test Start
+Time Used: 12.99s, Loss: 9.6023
+TP:872; FP:88; TN:1895; FN:167
+Presicion:0.908, Recall:0.839, Acc:0.916
+Epoch: 34, Train Start
+Time Used: 57.47s, Loss: 3.5194
+TP:4021; FP:1092; TN:6836; FN:131
+Presicion:0.786, Recall:0.968, Acc:0.899
+Test Start
+Time Used: 16.03s, Loss: 33.2433
+TP:485; FP:37; TN:1946; FN:554
+Presicion:0.929, Recall:0.467, Acc:0.804
+Epoch: 35, Train Start
+Time Used: 55.53s, Loss: 3.8016
+TP:4012; FP:1194; TN:6734; FN:140
+Presicion:0.771, Recall:0.966, Acc:0.890
+Test Start
+Time Used: 12.02s, Loss: 21.0095
+TP:766; FP:61; TN:1922; FN:273
+Presicion:0.926, Recall:0.737, Acc:0.889
+Epoch: 36, Train Start
+Time Used: 55.90s, Loss: 3.4199
+TP:3999; FP:936; TN:6992; FN:153
+Presicion:0.810, Recall:0.963, Acc:0.910
+Test Start
+Time Used: 12.09s, Loss: 27.0055
+TP:659; FP:32; TN:1951; FN:380
+Presicion:0.954, Recall:0.634, Acc:0.864
+Epoch: 37, Train Start
+Time Used: 59.19s, Loss: 2.9969
+TP:4037; FP:954; TN:6974; FN:115
+Presicion:0.809, Recall:0.972, Acc:0.912
+Test Start
+Time Used: 11.87s, Loss: 8.6562
+TP:890; FP:98; TN:1885; FN:149
+Presicion:0.901, Recall:0.857, Acc:0.918
+Model Saved
+Epoch: 38, Train Start
+Time Used: 55.77s, Loss: 2.9100
+TP:4043; FP:961; TN:6967; FN:109
+Presicion:0.808, Recall:0.974, Acc:0.911
+Test Start
+Time Used: 12.08s, Loss: 10.1099
+TP:856; FP:74; TN:1909; FN:183
+Presicion:0.920, Recall:0.824, Acc:0.915
+Epoch: 39, Train Start
+Time Used: 56.32s, Loss: 2.5943
+TP:4054; FP:847; TN:7081; FN:98
+Presicion:0.827, Recall:0.976, Acc:0.922
+Test Start
+Time Used: 12.41s, Loss: 19.0427
+TP:766; FP:50; TN:1933; FN:273
+Presicion:0.939, Recall:0.737, Acc:0.893
+Epoch: 40, Train Start
+Time Used: 61.07s, Loss: 2.8141
+TP:4056; FP:993; TN:6935; FN:96
+Presicion:0.803, Recall:0.977, Acc:0.910
+Test Start
+Time Used: 12.38s, Loss: 26.6280
+TP:738; FP:39; TN:1944; FN:301
+Presicion:0.950, Recall:0.710, Acc:0.887
+Epoch: 41, Train Start
+Time Used: 57.58s, Loss: 2.7616
+TP:4052; FP:897; TN:7031; FN:100
+Presicion:0.819, Recall:0.976, Acc:0.917
+Test Start
+Time Used: 12.47s, Loss: 6.6618
+TP:924; FP:83; TN:1900; FN:115
+Presicion:0.918, Recall:0.889, Acc:0.934
+Model Saved
+Epoch: 42, Train Start
+Time Used: 58.93s, Loss: 2.9017
+TP:4058; FP:877; TN:7051; FN:94
+Presicion:0.822, Recall:0.977, Acc:0.920
+Test Start
+Time Used: 19.83s, Loss: 19.4827
+TP:799; FP:73; TN:1910; FN:240
+Presicion:0.916, Recall:0.769, Acc:0.896
+Epoch: 43, Train Start
+Time Used: 79.29s, Loss: 2.6188
+TP:4060; FP:816; TN:7112; FN:92
+Presicion:0.833, Recall:0.978, Acc:0.925
+Test Start
+Time Used: 12.06s, Loss: 17.3542
+TP:838; FP:89; TN:1894; FN:201
+Presicion:0.904, Recall:0.807, Acc:0.904
+Epoch: 44, Train Start
+Time Used: 60.89s, Loss: 2.6290
+TP:4046; FP:682; TN:7246; FN:106
+Presicion:0.856, Recall:0.974, Acc:0.935
+Test Start
+Time Used: 14.37s, Loss: 12.5957
+TP:861; FP:79; TN:1904; FN:178
+Presicion:0.916, Recall:0.829, Acc:0.915
+Epoch: 45, Train Start
+Time Used: 67.18s, Loss: 2.4092
+TP:4058; FP:742; TN:7186; FN:94
+Presicion:0.845, Recall:0.977, Acc:0.931
+Test Start
+Time Used: 18.84s, Loss: 16.8413
+TP:773; FP:54; TN:1929; FN:266
+Presicion:0.935, Recall:0.744, Acc:0.894
+Epoch: 46, Train Start
+Time Used: 75.31s, Loss: 2.3813
+TP:4059; FP:841; TN:7087; FN:93
+Presicion:0.828, Recall:0.978, Acc:0.923
+Test Start
+Time Used: 12.58s, Loss: 16.3178
+TP:734; FP:58; TN:1925; FN:305
+Presicion:0.927, Recall:0.706, Acc:0.880
+Epoch: 47, Train Start
+Time Used: 55.78s, Loss: 3.2968
+TP:4046; FP:1104; TN:6824; FN:106
+Presicion:0.786, Recall:0.974, Acc:0.900
+Test Start
+Time Used: 12.62s, Loss: 21.1801
+TP:743; FP:59; TN:1924; FN:296
+Presicion:0.926, Recall:0.715, Acc:0.883
+Epoch: 48, Train Start
+Time Used: 55.30s, Loss: 2.9695
+TP:4049; FP:992; TN:6936; FN:103
+Presicion:0.803, Recall:0.975, Acc:0.909
+Test Start
+Time Used: 15.74s, Loss: 14.4814
+TP:779; FP:91; TN:1892; FN:260
+Presicion:0.895, Recall:0.750, Acc:0.884
+Epoch: 49, Train Start
+Time Used: 55.03s, Loss: 3.1009
+TP:4065; FP:985; TN:6943; FN:87
+Presicion:0.805, Recall:0.979, Acc:0.911
+Test Start
+Time Used: 12.25s, Loss: 17.4046
+TP:748; FP:48; TN:1935; FN:291
+Presicion:0.940, Recall:0.720, Acc:0.888
+Epoch: 50, Train Start
+Time Used: 54.80s, Loss: 2.7427
+TP:4053; FP:821; TN:7107; FN:99
+Presicion:0.832, Recall:0.976, Acc:0.924
+Test Start
+Time Used: 11.98s, Loss: 8.7076
+TP:824; FP:66; TN:1917; FN:215
+Presicion:0.926, Recall:0.793, Acc:0.907
+Epoch: 51, Train Start
+Time Used: 61.93s, Loss: 2.6764
+TP:4060; FP:918; TN:7010; FN:92
+Presicion:0.816, Recall:0.978, Acc:0.916
+Test Start
+Time Used: 12.34s, Loss: 10.0217
+TP:834; FP:71; TN:1912; FN:205
+Presicion:0.922, Recall:0.803, Acc:0.909
+Epoch: 52, Train Start
+Time Used: 63.05s, Loss: 2.1916
+TP:4074; FP:740; TN:7188; FN:78
+Presicion:0.846, Recall:0.981, Acc:0.932
+Test Start
+Time Used: 12.72s, Loss: 16.2035
+TP:805; FP:46; TN:1937; FN:234
+Presicion:0.946, Recall:0.775, Acc:0.907
+Epoch: 53, Train Start
+Time Used: 61.16s, Loss: 2.2884
+TP:4070; FP:797; TN:7131; FN:82
+Presicion:0.836, Recall:0.980, Acc:0.927
+Test Start
+Time Used: 18.27s, Loss: 11.3039
+TP:836; FP:57; TN:1926; FN:203
+Presicion:0.936, Recall:0.805, Acc:0.914
+Epoch: 54, Train Start
+Time Used: 66.29s, Loss: 2.1784
+TP:4063; FP:731; TN:7197; FN:89
+Presicion:0.848, Recall:0.979, Acc:0.932
+Test Start
+Time Used: 11.98s, Loss: 12.5527
+TP:864; FP:58; TN:1925; FN:175
+Presicion:0.937, Recall:0.832, Acc:0.923
+Epoch: 55, Train Start
+Time Used: 65.29s, Loss: 1.9474
+TP:4080; FP:702; TN:7226; FN:72
+Presicion:0.853, Recall:0.983, Acc:0.936
+Test Start
+Time Used: 12.69s, Loss: 22.9902
+TP:755; FP:49; TN:1934; FN:284
+Presicion:0.939, Recall:0.727, Acc:0.890
+Epoch: 56, Train Start
+Time Used: 58.74s, Loss: 2.6995
+TP:4062; FP:849; TN:7079; FN:90
+Presicion:0.827, Recall:0.978, Acc:0.922
+Test Start
+Time Used: 12.88s, Loss: 10.9972
+TP:812; FP:53; TN:1930; FN:227
+Presicion:0.939, Recall:0.782, Acc:0.907
+Epoch: 57, Train Start
+Time Used: 72.07s, Loss: 2.1263
+TP:4070; FP:794; TN:7134; FN:82
+Presicion:0.837, Recall:0.980, Acc:0.927
+Test Start
+Time Used: 14.26s, Loss: 18.9127
+TP:775; FP:61; TN:1922; FN:264
+Presicion:0.927, Recall:0.746, Acc:0.892
+Epoch: 58, Train Start
+Time Used: 62.66s, Loss: 1.9584
+TP:4079; FP:705; TN:7223; FN:73
+Presicion:0.853, Recall:0.982, Acc:0.936
+Test Start
+Time Used: 18.38s, Loss: 19.0781
+TP:812; FP:50; TN:1933; FN:227
+Presicion:0.942, Recall:0.782, Acc:0.908
+Epoch: 59, Train Start
+Time Used: 60.87s, Loss: 1.8379
+TP:4078; FP:700; TN:7228; FN:74
+Presicion:0.853, Recall:0.982, Acc:0.936
+Test Start
+Time Used: 18.20s, Loss: 7.3647
+TP:943; FP:190; TN:1793; FN:96
+Presicion:0.832, Recall:0.908, Acc:0.905
+Epoch: 60, Train Start
+Time Used: 68.45s, Loss: 2.2288
+TP:4080; FP:782; TN:7146; FN:72
+Presicion:0.839, Recall:0.983, Acc:0.929
+Test Start
+Time Used: 11.86s, Loss: 12.5651
+TP:905; FP:57; TN:1926; FN:134
+Presicion:0.941, Recall:0.871, Acc:0.937
+Epoch: 61, Train Start
+Time Used: 58.69s, Loss: 1.8615
+TP:4075; FP:691; TN:7237; FN:77
+Presicion:0.855, Recall:0.981, Acc:0.936
+Test Start
+Time Used: 13.46s, Loss: 6.5045
+TP:935; FP:77; TN:1906; FN:104
+Presicion:0.924, Recall:0.900, Acc:0.940
+Model Saved
+Epoch: 62, Train Start
+Time Used: 59.80s, Loss: 1.8439
+TP:4084; FP:627; TN:7301; FN:68
+Presicion:0.867, Recall:0.984, Acc:0.942
+Test Start
+Time Used: 11.67s, Loss: 6.8184
+TP:940; FP:69; TN:1914; FN:99
+Presicion:0.932, Recall:0.905, Acc:0.944
+Epoch: 63, Train Start
+Time Used: 53.72s, Loss: 1.8181
+TP:4079; FP:713; TN:7215; FN:73
+Presicion:0.851, Recall:0.982, Acc:0.935
+Test Start
+Time Used: 11.82s, Loss: 21.1040
+TP:764; FP:34; TN:1949; FN:275
+Presicion:0.957, Recall:0.735, Acc:0.898
+Epoch: 64, Train Start
+Time Used: 54.30s, Loss: 2.1624
+TP:4078; FP:778; TN:7150; FN:74
+Presicion:0.840, Recall:0.982, Acc:0.929
+Test Start
+Time Used: 12.24s, Loss: 16.5833
+TP:847; FP:45; TN:1938; FN:192
+Presicion:0.950, Recall:0.815, Acc:0.922
+Epoch: 65, Train Start
+Time Used: 58.59s, Loss: 1.9697
+TP:4080; FP:686; TN:7242; FN:72
+Presicion:0.856, Recall:0.983, Acc:0.937
+Test Start
+Time Used: 12.30s, Loss: 6.3055
+TP:960; FP:90; TN:1893; FN:79
+Presicion:0.914, Recall:0.924, Acc:0.944
+Model Saved
+Epoch: 66, Train Start
+Time Used: 55.30s, Loss: 1.7434
+TP:4077; FP:540; TN:7388; FN:75
+Presicion:0.883, Recall:0.982, Acc:0.949
+Test Start
+Time Used: 12.34s, Loss: 13.2388
+TP:918; FP:41; TN:1942; FN:121
+Presicion:0.957, Recall:0.884, Acc:0.946
+Epoch: 67, Train Start
+Time Used: 55.91s, Loss: 1.7739
+TP:4076; FP:602; TN:7326; FN:76
+Presicion:0.871, Recall:0.982, Acc:0.944
+Test Start
+Time Used: 12.27s, Loss: 22.1124
+TP:813; FP:61; TN:1922; FN:226
+Presicion:0.930, Recall:0.782, Acc:0.905
+Epoch: 68, Train Start
+Time Used: 60.41s, Loss: 1.7251
+TP:4076; FP:559; TN:7369; FN:76
+Presicion:0.879, Recall:0.982, Acc:0.947
+Test Start
+Time Used: 12.65s, Loss: 18.0101
+TP:788; FP:44; TN:1939; FN:251
+Presicion:0.947, Recall:0.758, Acc:0.902
+Epoch: 69, Train Start
+Time Used: 71.45s, Loss: 1.5631
+TP:4087; FP:555; TN:7373; FN:65
+Presicion:0.880, Recall:0.984, Acc:0.949
+Test Start
+Time Used: 19.17s, Loss: 9.9672
+TP:906; FP:42; TN:1941; FN:133
+Presicion:0.956, Recall:0.872, Acc:0.942
+Epoch: 70, Train Start
+Time Used: 65.04s, Loss: 2.0987
+TP:4067; FP:679; TN:7249; FN:85
+Presicion:0.857, Recall:0.980, Acc:0.937
+Test Start
+Time Used: 13.28s, Loss: 8.1849
+TP:955; FP:104; TN:1879; FN:84
+Presicion:0.902, Recall:0.919, Acc:0.938
+Epoch: 71, Train Start
+Time Used: 69.32s, Loss: 2.0054
+TP:4079; FP:650; TN:7278; FN:73
+Presicion:0.863, Recall:0.982, Acc:0.940
+Test Start
+Time Used: 13.67s, Loss: 5.5357
+TP:959; FP:67; TN:1916; FN:80
+Presicion:0.935, Recall:0.923, Acc:0.951
+Model Saved
+Epoch: 72, Train Start
+Time Used: 65.43s, Loss: 1.5943
+TP:4080; FP:537; TN:7391; FN:72
+Presicion:0.884, Recall:0.983, Acc:0.950
+Test Start
+Time Used: 12.62s, Loss: 15.5692
+TP:870; FP:31; TN:1952; FN:169
+Presicion:0.966, Recall:0.837, Acc:0.934
+Epoch: 73, Train Start
+Time Used: 67.46s, Loss: 2.2625
+TP:4070; FP:808; TN:7120; FN:82
+Presicion:0.834, Recall:0.980, Acc:0.926
+Test Start
+Time Used: 20.21s, Loss: 12.4011
+TP:810; FP:84; TN:1899; FN:229
+Presicion:0.906, Recall:0.780, Acc:0.896
+Epoch: 74, Train Start
+Time Used: 61.04s, Loss: 3.5624
+TP:4027; FP:980; TN:6948; FN:125
+Presicion:0.804, Recall:0.970, Acc:0.909
+Test Start
+Time Used: 13.20s, Loss: 12.2217
+TP:884; FP:97; TN:1886; FN:155
+Presicion:0.901, Recall:0.851, Acc:0.917
+Epoch: 75, Train Start
+Time Used: 64.40s, Loss: 2.3602
+TP:4064; FP:754; TN:7174; FN:88
+Presicion:0.844, Recall:0.979, Acc:0.930
+Test Start
+Time Used: 13.43s, Loss: 15.2492
+TP:850; FP:49; TN:1934; FN:189
+Presicion:0.945, Recall:0.818, Acc:0.921
+Epoch: 76, Train Start
+Time Used: 68.17s, Loss: 1.9136
+TP:4081; FP:718; TN:7210; FN:71
+Presicion:0.850, Recall:0.983, Acc:0.935
+Test Start
+Time Used: 14.02s, Loss: 7.6788
+TP:911; FP:66; TN:1917; FN:128
+Presicion:0.932, Recall:0.877, Acc:0.936
+Epoch: 77, Train Start
+Time Used: 61.61s, Loss: 1.6488
+TP:4091; FP:574; TN:7354; FN:61
+Presicion:0.877, Recall:0.985, Acc:0.947
+Test Start
+Time Used: 12.78s, Loss: 10.7244
+TP:874; FP:55; TN:1928; FN:165
+Presicion:0.941, Recall:0.841, Acc:0.927
+Epoch: 78, Train Start
+Time Used: 59.28s, Loss: 1.8824
+TP:4091; FP:681; TN:7247; FN:61
+Presicion:0.857, Recall:0.985, Acc:0.939
+Test Start
+Time Used: 12.38s, Loss: 5.7951
+TP:967; FP:77; TN:1906; FN:72
+Presicion:0.926, Recall:0.931, Acc:0.951
+Epoch: 79, Train Start
+Time Used: 74.16s, Loss: 1.6278
+TP:4088; FP:626; TN:7302; FN:64
+Presicion:0.867, Recall:0.985, Acc:0.943
+Test Start
+Time Used: 15.65s, Loss: 6.4599
+TP:969; FP:66; TN:1917; FN:70
+Presicion:0.936, Recall:0.933, Acc:0.955
+Epoch: 80, Train Start
+Time Used: 65.95s, Loss: 1.5373
+TP:4104; FP:595; TN:7333; FN:48
+Presicion:0.873, Recall:0.988, Acc:0.947
+Test Start
+Time Used: 11.99s, Loss: 7.6095
+TP:948; FP:64; TN:1919; FN:91
+Presicion:0.937, Recall:0.912, Acc:0.949
+Epoch: 81, Train Start
+Time Used: 60.17s, Loss: 1.5759
+TP:4095; FP:555; TN:7373; FN:57
+Presicion:0.881, Recall:0.986, Acc:0.949
+Test Start
+Time Used: 13.88s, Loss: 15.7207
+TP:890; FP:46; TN:1937; FN:149
+Presicion:0.951, Recall:0.857, Acc:0.935
+Epoch: 82, Train Start
+Time Used: 61.56s, Loss: 1.4359
+TP:4098; FP:530; TN:7398; FN:54
+Presicion:0.885, Recall:0.987, Acc:0.952
+Test Start
+Time Used: 12.20s, Loss: 18.8592
+TP:865; FP:66; TN:1917; FN:174
+Presicion:0.929, Recall:0.833, Acc:0.921
+Epoch: 83, Train Start
+Time Used: 54.93s, Loss: 1.3610
+TP:4096; FP:549; TN:7379; FN:56
+Presicion:0.882, Recall:0.987, Acc:0.950
+Test Start
+Time Used: 12.23s, Loss: 12.7007
+TP:896; FP:59; TN:1924; FN:143
+Presicion:0.938, Recall:0.862, Acc:0.933
+Epoch: 84, Train Start
+Time Used: 55.51s, Loss: 1.4959
+TP:4096; FP:583; TN:7345; FN:56
+Presicion:0.875, Recall:0.987, Acc:0.947
+Test Start
+Time Used: 16.11s, Loss: 15.1342
+TP:889; FP:45; TN:1938; FN:150
+Presicion:0.952, Recall:0.856, Acc:0.935
+Epoch: 85, Train Start
+Time Used: 55.47s, Loss: 1.2051
+TP:4103; FP:464; TN:7464; FN:49
+Presicion:0.898, Recall:0.988, Acc:0.958
+Test Start
+Time Used: 12.12s, Loss: 15.7645
+TP:902; FP:46; TN:1937; FN:137
+Presicion:0.951, Recall:0.868, Acc:0.939
+Epoch: 86, Train Start
+Time Used: 55.08s, Loss: 1.2910
+TP:4103; FP:518; TN:7410; FN:49
+Presicion:0.888, Recall:0.988, Acc:0.953
+Test Start
+Time Used: 12.31s, Loss: 8.0107
+TP:954; FP:53; TN:1930; FN:85
+Presicion:0.947, Recall:0.918, Acc:0.954
+Epoch: 87, Train Start
+Time Used: 60.89s, Loss: 1.3130
+TP:4106; FP:577; TN:7351; FN:46
+Presicion:0.877, Recall:0.989, Acc:0.948
+Test Start
+Time Used: 12.52s, Loss: 6.7933
+TP:962; FP:70; TN:1913; FN:77
+Presicion:0.932, Recall:0.926, Acc:0.951
+Epoch: 88, Train Start
+Time Used: 56.16s, Loss: 1.2031
+TP:4108; FP:511; TN:7417; FN:44
+Presicion:0.889, Recall:0.989, Acc:0.954
+Test Start
+Time Used: 12.24s, Loss: 10.5092
+TP:903; FP:61; TN:1922; FN:136
+Presicion:0.937, Recall:0.869, Acc:0.935
+Epoch: 89, Train Start
+Time Used: 55.29s, Loss: 1.3195
+TP:4100; FP:577; TN:7351; FN:52
+Presicion:0.877, Recall:0.987, Acc:0.948
+Test Start
+Time Used: 12.53s, Loss: 9.4935
+TP:928; FP:51; TN:1932; FN:111
+Presicion:0.948, Recall:0.893, Acc:0.946
+Epoch: 90, Train Start
+Time Used: 60.03s, Loss: 1.8622
+TP:4088; FP:616; TN:7312; FN:64
+Presicion:0.869, Recall:0.985, Acc:0.944
+Test Start
+Time Used: 12.31s, Loss: 8.5370
+TP:916; FP:56; TN:1927; FN:123
+Presicion:0.942, Recall:0.882, Acc:0.941
+Epoch: 91, Train Start
+Time Used: 55.82s, Loss: 1.4793
+TP:4099; FP:549; TN:7379; FN:53
+Presicion:0.882, Recall:0.987, Acc:0.950
+Test Start
+Time Used: 12.12s, Loss: 7.7613
+TP:970; FP:57; TN:1926; FN:69
+Presicion:0.944, Recall:0.934, Acc:0.958
+Epoch: 92, Train Start
+Time Used: 55.47s, Loss: 1.4495
+TP:4107; FP:586; TN:7342; FN:45
+Presicion:0.875, Recall:0.989, Acc:0.948
+Test Start
+Time Used: 12.28s, Loss: 5.5121
+TP:955; FP:51; TN:1932; FN:84
+Presicion:0.949, Recall:0.919, Acc:0.955
+Model Saved
+Epoch: 93, Train Start
+Time Used: 59.02s, Loss: 1.7536
+TP:4088; FP:633; TN:7295; FN:64
+Presicion:0.866, Recall:0.985, Acc:0.942
+Test Start
+Time Used: 12.34s, Loss: 12.9425
+TP:905; FP:50; TN:1933; FN:134
+Presicion:0.948, Recall:0.871, Acc:0.939
+Epoch: 94, Train Start
+Time Used: 56.33s, Loss: 1.5285
+TP:4102; FP:527; TN:7401; FN:50
+Presicion:0.886, Recall:0.988, Acc:0.952
+Test Start
+Time Used: 12.20s, Loss: 5.2576
+TP:975; FP:86; TN:1897; FN:64
+Presicion:0.919, Recall:0.938, Acc:0.950
+Model Saved
+Epoch: 95, Train Start
+Time Used: 55.91s, Loss: 1.6707
+TP:4084; FP:649; TN:7279; FN:68
+Presicion:0.863, Recall:0.984, Acc:0.941
+Test Start
+Time Used: 16.37s, Loss: 12.7661
+TP:848; FP:82; TN:1901; FN:191
+Presicion:0.912, Recall:0.816, Acc:0.910
+Epoch: 96, Train Start
+Time Used: 55.87s, Loss: 1.7168
+TP:4099; FP:713; TN:7215; FN:53
+Presicion:0.852, Recall:0.987, Acc:0.937
+Test Start
+Time Used: 12.11s, Loss: 8.7200
+TP:929; FP:61; TN:1922; FN:110
+Presicion:0.938, Recall:0.894, Acc:0.943
+Epoch: 97, Train Start
+Time Used: 55.55s, Loss: 1.5630
+TP:4093; FP:554; TN:7374; FN:59
+Presicion:0.881, Recall:0.986, Acc:0.949
+Test Start
+Time Used: 13.11s, Loss: 6.7044
+TP:971; FP:82; TN:1901; FN:68
+Presicion:0.922, Recall:0.935, Acc:0.950
+Epoch: 98, Train Start
+Time Used: 60.51s, Loss: 1.6284
+TP:4094; FP:607; TN:7321; FN:58
+Presicion:0.871, Recall:0.986, Acc:0.945
+Test Start
+Time Used: 11.95s, Loss: 12.0887
+TP:927; FP:56; TN:1927; FN:112
+Presicion:0.943, Recall:0.892, Acc:0.944
+Epoch: 99, Train Start
+Time Used: 56.09s, Loss: 1.3025
+TP:4105; FP:527; TN:7401; FN:47
+Presicion:0.886, Recall:0.989, Acc:0.952
+Test Start
+Time Used: 12.66s, Loss: 6.6830
+TP:968; FP:106; TN:1877; FN:71
+Presicion:0.901, Recall:0.932, Acc:0.941

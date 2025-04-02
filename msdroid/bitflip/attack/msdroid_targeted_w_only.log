@@ -1,0 +1,120 @@
+Set seed 0
+GNNStack_INT8_2(
+  (convs): ModuleList(
+    (0): GINConv(nn=Sequential(
+      (0): Linear(in_features=492, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=128, bias=True)
+    ))
+    (1-2): 2 x GINConv(nn=Sequential(
+      (0): Linear(in_features=128, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=128, bias=True)
+    ))
+  )
+  (norm): ModuleList(
+    (0-1): 2 x LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+  )
+  (post_mp): Sequential(
+    (0): my_8bit_linear(
+      (ori_bnb_linear): Linear8bitLt(in_features=256, out_features=128, bias=True)
+    )
+    (1): Dropout(p=0.25, inplace=False)
+    (2): my_8bit_linear(
+      (ori_bnb_linear): Linear8bitLt(in_features=128, out_features=2, bias=True)
+    )
+  )
+)
+[+] Done Replace Model
+GNNStack_INT8_2(
+  (convs): ModuleList(
+    (0): GINConv(nn=Sequential(
+      (0): Linear(in_features=492, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=128, bias=True)
+    ))
+    (1-2): 2 x GINConv(nn=Sequential(
+      (0): Linear(in_features=128, out_features=128, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=128, out_features=128, bias=True)
+    ))
+  )
+  (norm): ModuleList(
+    (0-1): 2 x LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+  )
+  (post_mp): Sequential(
+    (0): Linear8bitLt(in_features=256, out_features=128, bias=True)
+    (1): Dropout(p=0.25, inplace=False)
+    (2): Linear8bitLt(in_features=128, out_features=2, bias=True)
+  )
+)
+[+] Done Load Clean Model
+Parameter containing:
+tensor([1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0.,
+        0., 1., 1., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0.,
+        0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 1.,
+        1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0.], requires_grad=True)
+[+] Done Load Trigger
+aux, val , load
+[+] Done Process Dataset, aux_apk:512,aux_ben_subgraph:1474,aux_mal_subgraph:737,val_apk_num:512
+12 244 254 2 254 2 0.97265625 0.0078125 0.0078125
+[+] Attack effect before bitflip
+[+] ext_epoch:0,trigger malware loss:0.1606852263212204 malware_loss:0.16812913119792938, benign_loss:0.2426331490278244
+[+] ext_epoch:0,t_m_acc:0.9918588873812755 m_acc:1.0, b_m_acc:1.0
+[+] change post_mp.2@199@0@weight, loss: -0.41444292664527893
+13 243 254 2 254 2 0.970703125 0.0078125 0.0078125
+[+] Flip 1 bit: ['post_mp.2@199@0@weight']
+[+] ext_epoch:1,trigger malware loss:0.16642530262470245 malware_loss:0.17410223186016083, benign_loss:0.24358133971691132
+[+] ext_epoch:1,t_m_acc:0.994572591587517 m_acc:1.0, b_m_acc:1.0
+[+] change post_mp.2@162@0@weight, loss: -0.43132877349853516
+13 243 254 2 254 2 0.970703125 0.0078125 0.0078125
+[+] Flip 2 bit: ['post_mp.2@199@0@weight', 'post_mp.2@162@0@weight']
+[+] ext_epoch:2,trigger malware loss:0.17080572247505188 malware_loss:0.17870523035526276, benign_loss:0.2439945638179779
+[+] ext_epoch:2,t_m_acc:0.994572591587517 m_acc:1.0, b_m_acc:0.9986431478968792
+[+] change post_mp.2@125@0@weight, loss: -0.44683581590652466
+13 243 254 2 254 2 0.970703125 0.0078125 0.0078125
+[+] Flip 3 bit: ['post_mp.2@199@0@weight', 'post_mp.2@162@0@weight', 'post_mp.2@125@0@weight']
+[+] ext_epoch:3,trigger malware loss:0.17519518733024597 malware_loss:0.1833724081516266, benign_loss:0.2457677274942398
+[+] ext_epoch:3,t_m_acc:0.994572591587517 m_acc:1.0, b_m_acc:0.9986431478968792
+[+] change post_mp.2@80@1@weight, loss: -0.45600461959838867
+13 243 254 2 254 2 0.970703125 0.0078125 0.0078125
+[+] Flip 4 bit: ['post_mp.2@199@0@weight', 'post_mp.2@162@0@weight', 'post_mp.2@125@0@weight', 'post_mp.2@80@1@weight']
+[+] ext_epoch:4,trigger malware loss:0.17728495597839355 malware_loss:0.18554940819740295, benign_loss:0.24487076699733734
+[+] ext_epoch:4,t_m_acc:0.994572591587517 m_acc:1.0, b_m_acc:0.9986431478968792
+[+] change post_mp.0@9134@1@weight, loss: -0.46493107080459595
+14 242 254 2 254 2 0.96875 0.0078125 0.0078125
+[+] Flip 5 bit: ['post_mp.2@199@0@weight', 'post_mp.2@162@0@weight', 'post_mp.2@125@0@weight', 'post_mp.2@80@1@weight', 'post_mp.0@9134@1@weight']
+[+] ext_epoch:5,trigger malware loss:0.17951948940753937 malware_loss:0.18785615265369415, benign_loss:0.24481020867824554
+[+] ext_epoch:5,t_m_acc:0.994572591587517 m_acc:1.0, b_m_acc:0.9986431478968792
+[+] change post_mp.2@187@1@weight, loss: -0.4720935821533203
+14 242 254 2 254 2 0.96875 0.0078125 0.0078125
+[+] Flip 6 bit: ['post_mp.2@199@0@weight', 'post_mp.2@162@0@weight', 'post_mp.2@125@0@weight', 'post_mp.2@80@1@weight', 'post_mp.0@9134@1@weight', 'post_mp.2@187@1@weight']
+[+] ext_epoch:6,trigger malware loss:0.18155980110168457 malware_loss:0.19000892341136932, benign_loss:0.24569648504257202
+[+] ext_epoch:6,t_m_acc:0.994572591587517 m_acc:1.0, b_m_acc:0.9986431478968792
+[+] change post_mp.2@202@1@weight, loss: -0.47874748706817627
+14 242 254 2 254 2 0.96875 0.0078125 0.0078125
+[+] Flip 7 bit: ['post_mp.2@199@0@weight', 'post_mp.2@162@0@weight', 'post_mp.2@125@0@weight', 'post_mp.2@80@1@weight', 'post_mp.0@9134@1@weight', 'post_mp.2@187@1@weight', 'post_mp.2@202@1@weight']
+[+] ext_epoch:7,trigger malware loss:0.18371127545833588 malware_loss:0.19232548773288727, benign_loss:0.24748340249061584
+[+] ext_epoch:7,t_m_acc:0.994572591587517 m_acc:1.0, b_m_acc:0.9986431478968792
+[+] change post_mp.2@204@1@weight, loss: -0.48491597175598145
+14 242 254 2 254 2 0.96875 0.0078125 0.0078125
+[+] Flip 8 bit: ['post_mp.2@199@0@weight', 'post_mp.2@162@0@weight', 'post_mp.2@125@0@weight', 'post_mp.2@80@1@weight', 'post_mp.0@9134@1@weight', 'post_mp.2@187@1@weight', 'post_mp.2@202@1@weight', 'post_mp.2@204@1@weight']
+[+] ext_epoch:8,trigger malware loss:0.18570613861083984 malware_loss:0.19446030259132385, benign_loss:0.24915441870689392
+[+] ext_epoch:8,t_m_acc:0.994572591587517 m_acc:1.0, b_m_acc:0.9986431478968792
+[+] change post_mp.2@80@2@weight, loss: -0.48921310901641846
+14 242 254 2 254 2 0.96875 0.0078125 0.0078125
+[+] Flip 9 bit: ['post_mp.2@199@0@weight', 'post_mp.2@162@0@weight', 'post_mp.2@125@0@weight', 'post_mp.2@80@1@weight', 'post_mp.0@9134@1@weight', 'post_mp.2@187@1@weight', 'post_mp.2@202@1@weight', 'post_mp.2@204@1@weight', 'post_mp.2@80@2@weight']
+[+] ext_epoch:9,trigger malware loss:0.18668107688426971 malware_loss:0.19547714293003082, benign_loss:0.24871516227722168
+[+] ext_epoch:9,t_m_acc:0.994572591587517 m_acc:1.0, b_m_acc:0.9986431478968792
+[+] change post_mp.0@9134@2@weight, loss: -0.49341076612472534
+14 242 254 2 254 2 0.96875 0.0078125 0.0078125
+[+] Flip 10 bit: ['post_mp.2@199@0@weight', 'post_mp.2@162@0@weight', 'post_mp.2@125@0@weight', 'post_mp.2@80@1@weight', 'post_mp.0@9134@1@weight', 'post_mp.2@187@1@weight', 'post_mp.2@202@1@weight', 'post_mp.2@204@1@weight', 'post_mp.2@80@2@weight', 'post_mp.0@9134@2@weight']

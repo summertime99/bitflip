@@ -1,0 +1,319 @@
+model/vae_model_f32.pth mlp_model_f32.pth
+{'epoch_num': 150, 'val_epoch_num': 5, 'learning_rate': 0.001, 'batch_size': 256, 'l1': 10, 'l2': 1, 'l3': 10, 'train_sample_size': 12000, 'test_sample_size': 3500} {'epoch_num': 100, 'val_epoch_num': 5, 'learning_rate': 0.001, 'batch_size': 128, 'train_sample_size': 12000, 'test_sample_size': 3500}
+epoch num:150, val_epoch_num:5, batch_size:256, lr:0.001, lambda1,2,3:10,1,10
+Epoch 1, Loss: 275.1070, Loss1:0.7287, Loss2:2.9534, Loss3:26.4866
+Epoch 2, Loss: 244.3376, Loss1:0.6884, Loss2:3.3090, Loss3:23.4145
+Epoch 3, Loss: 228.9133, Loss1:0.6884, Loss2:3.7791, Loss3:21.8251
+Epoch 4, Loss: 217.5085, Loss1:0.6884, Loss2:3.5755, Loss3:20.7049
+Epoch 5, Loss: 209.9748, Loss1:0.6884, Loss2:3.7978, Loss3:19.9293
+Validation, Loss: 212.4287, Loss1:0.6883, Loss2:2.3579, Loss3:20.3188
+Vae Model Save
+Epoch 6, Loss: 211.1332, Loss1:0.6884, Loss2:3.7525, Loss3:20.0497
+Epoch 7, Loss: 207.0361, Loss1:0.6884, Loss2:3.7773, Loss3:19.6375
+Epoch 8, Loss: 204.4426, Loss1:0.6884, Loss2:3.7828, Loss3:19.3776
+Epoch 9, Loss: 203.6848, Loss1:0.6884, Loss2:3.8130, Loss3:19.2988
+Epoch 10, Loss: 200.5720, Loss1:0.6884, Loss2:3.8009, Loss3:18.9887
+Validation, Loss: 193.9697, Loss1:0.6883, Loss2:3.3669, Loss3:18.3719
+Vae Model Save
+Epoch 11, Loss: 201.0669, Loss1:0.6884, Loss2:3.8463, Loss3:19.0337
+Epoch 12, Loss: 197.9246, Loss1:0.6884, Loss2:3.8845, Loss3:18.7156
+Epoch 13, Loss: 197.8665, Loss1:0.6884, Loss2:3.9062, Loss3:18.7076
+Epoch 14, Loss: 197.4772, Loss1:0.6884, Loss2:3.8509, Loss3:18.6742
+Epoch 15, Loss: 195.4895, Loss1:0.6884, Loss2:3.9310, Loss3:18.4674
+Validation, Loss: 197.6923, Loss1:0.6884, Loss2:4.1067, Loss3:18.6702
+Epoch 16, Loss: 195.2289, Loss1:0.6884, Loss2:3.9213, Loss3:18.4424
+Epoch 17, Loss: 195.1016, Loss1:0.6884, Loss2:3.8320, Loss3:18.4386
+Epoch 18, Loss: 195.6329, Loss1:0.6884, Loss2:3.9669, Loss3:18.4782
+Epoch 19, Loss: 193.7391, Loss1:0.6884, Loss2:3.9120, Loss3:18.2943
+Epoch 20, Loss: 192.9648, Loss1:0.6884, Loss2:3.9728, Loss3:18.2108
+Validation, Loss: 189.4264, Loss1:0.6883, Loss2:4.1944, Loss3:17.8349
+Vae Model Save
+Epoch 21, Loss: 194.6186, Loss1:0.6884, Loss2:3.9614, Loss3:18.3773
+Epoch 22, Loss: 193.1487, Loss1:0.6884, Loss2:3.8891, Loss3:18.2376
+Epoch 23, Loss: 190.4097, Loss1:0.6884, Loss2:3.9267, Loss3:17.9599
+Epoch 24, Loss: 191.6087, Loss1:0.6884, Loss2:3.8931, Loss3:18.0832
+Epoch 25, Loss: 190.4721, Loss1:0.6884, Loss2:3.9571, Loss3:17.9631
+Validation, Loss: 196.4922, Loss1:0.6883, Loss2:4.0002, Loss3:18.5609
+Epoch 26, Loss: 192.8425, Loss1:0.6884, Loss2:3.9940, Loss3:18.1965
+Epoch 27, Loss: 191.0112, Loss1:0.6884, Loss2:3.9165, Loss3:18.0211
+Epoch 28, Loss: 189.7250, Loss1:0.6884, Loss2:3.9560, Loss3:17.8885
+Epoch 29, Loss: 189.7324, Loss1:0.6884, Loss2:3.9320, Loss3:17.8916
+Epoch 30, Loss: 190.6689, Loss1:0.6884, Loss2:3.9882, Loss3:17.9797
+Validation, Loss: 184.2937, Loss1:0.6883, Loss2:3.5246, Loss3:17.3886
+Vae Model Save
+Epoch 31, Loss: 190.0076, Loss1:0.6884, Loss2:4.0390, Loss3:17.9085
+Epoch 32, Loss: 189.5898, Loss1:0.6884, Loss2:3.9435, Loss3:17.8762
+Epoch 33, Loss: 188.5978, Loss1:0.6884, Loss2:4.0556, Loss3:17.7658
+Epoch 34, Loss: 186.7745, Loss1:0.6884, Loss2:4.0224, Loss3:17.5868
+Epoch 35, Loss: 188.9481, Loss1:0.6884, Loss2:3.9366, Loss3:17.8128
+Validation, Loss: 191.0507, Loss1:0.6883, Loss2:3.7695, Loss3:18.0398
+Epoch 36, Loss: 185.7397, Loss1:0.6884, Loss2:3.9792, Loss3:17.4877
+Epoch 37, Loss: 189.0054, Loss1:0.6884, Loss2:3.8865, Loss3:17.8235
+Epoch 38, Loss: 186.4248, Loss1:0.6884, Loss2:3.9224, Loss3:17.5618
+Epoch 39, Loss: 188.6786, Loss1:0.6884, Loss2:3.9366, Loss3:17.7858
+Epoch 40, Loss: 185.9902, Loss1:0.6884, Loss2:4.0202, Loss3:17.5086
+Validation, Loss: 191.9843, Loss1:0.6884, Loss2:3.7057, Loss3:18.1395
+Epoch 41, Loss: 184.6858, Loss1:0.6884, Loss2:4.0298, Loss3:17.3772
+Epoch 42, Loss: 185.0110, Loss1:0.6884, Loss2:4.0180, Loss3:17.4109
+Epoch 43, Loss: 186.8617, Loss1:0.6884, Loss2:4.0805, Loss3:17.5897
+Epoch 44, Loss: 181.9582, Loss1:0.6884, Loss2:4.2570, Loss3:17.0817
+Epoch 45, Loss: 185.6990, Loss1:0.6884, Loss2:3.9960, Loss3:17.4819
+Validation, Loss: 191.5902, Loss1:0.6883, Loss2:4.5519, Loss3:18.0155
+Epoch 46, Loss: 183.8170, Loss1:0.6884, Loss2:4.0025, Loss3:17.2931
+Epoch 47, Loss: 184.5979, Loss1:0.6884, Loss2:4.1132, Loss3:17.3601
+Epoch 48, Loss: 183.7764, Loss1:0.6884, Loss2:4.1448, Loss3:17.2748
+Epoch 49, Loss: 182.0089, Loss1:0.6884, Loss2:4.0862, Loss3:17.1039
+Epoch 50, Loss: 180.4370, Loss1:0.6884, Loss2:4.2085, Loss3:16.9345
+Validation, Loss: 188.4214, Loss1:0.6883, Loss2:4.4462, Loss3:17.7092
+Epoch 51, Loss: 183.5570, Loss1:0.6884, Loss2:4.3382, Loss3:17.2335
+Epoch 52, Loss: 178.5470, Loss1:0.6884, Loss2:4.1450, Loss3:16.7518
+Epoch 53, Loss: 181.1079, Loss1:0.6884, Loss2:4.1516, Loss3:17.0072
+Epoch 54, Loss: 179.3416, Loss1:0.6884, Loss2:4.0926, Loss3:16.8365
+Epoch 55, Loss: 184.0286, Loss1:0.6884, Loss2:4.2256, Loss3:17.2919
+Validation, Loss: 182.9105, Loss1:0.6883, Loss2:3.4574, Loss3:17.2570
+Vae Model Save
+Epoch 56, Loss: 182.0216, Loss1:0.6884, Loss2:4.1128, Loss3:17.1025
+Epoch 57, Loss: 183.1773, Loss1:0.6884, Loss2:4.3231, Loss3:17.1970
+Epoch 58, Loss: 180.3320, Loss1:0.6884, Loss2:4.3582, Loss3:16.9090
+Epoch 59, Loss: 180.0501, Loss1:0.6884, Loss2:4.4334, Loss3:16.8733
+Epoch 60, Loss: 175.0146, Loss1:0.6884, Loss2:4.2768, Loss3:16.3854
+Validation, Loss: 184.0337, Loss1:0.6884, Loss2:4.0138, Loss3:17.3136
+Epoch 61, Loss: 178.7644, Loss1:0.6884, Loss2:4.3113, Loss3:16.7569
+Epoch 62, Loss: 178.8444, Loss1:0.6884, Loss2:4.4711, Loss3:16.7489
+Epoch 63, Loss: 178.5150, Loss1:0.6884, Loss2:4.5277, Loss3:16.7103
+Epoch 64, Loss: 179.1799, Loss1:0.6884, Loss2:4.3563, Loss3:16.7940
+Epoch 65, Loss: 176.1779, Loss1:0.6884, Loss2:4.3963, Loss3:16.4897
+Validation, Loss: 181.8510, Loss1:0.6884, Loss2:3.8958, Loss3:17.1072
+Vae Model Save
+Epoch 66, Loss: 178.5962, Loss1:0.6884, Loss2:4.3458, Loss3:16.7366
+Epoch 67, Loss: 175.7088, Loss1:0.6884, Loss2:4.4413, Loss3:16.4383
+Epoch 68, Loss: 175.4657, Loss1:0.6884, Loss2:4.4352, Loss3:16.4146
+Epoch 69, Loss: 177.1754, Loss1:0.6884, Loss2:4.3313, Loss3:16.5960
+Epoch 70, Loss: 177.7969, Loss1:0.6884, Loss2:4.4652, Loss3:16.6448
+Validation, Loss: 185.3200, Loss1:0.6883, Loss2:5.0326, Loss3:17.3404
+Epoch 71, Loss: 176.6656, Loss1:0.6884, Loss2:4.3252, Loss3:16.5456
+Epoch 72, Loss: 174.9549, Loss1:0.6884, Loss2:4.2591, Loss3:16.3812
+Epoch 73, Loss: 176.5500, Loss1:0.6884, Loss2:4.4898, Loss3:16.5176
+Epoch 74, Loss: 175.4212, Loss1:0.6884, Loss2:4.3593, Loss3:16.4178
+Epoch 75, Loss: 174.5288, Loss1:0.6884, Loss2:4.2992, Loss3:16.3346
+Validation, Loss: 185.2096, Loss1:0.6884, Loss2:4.3811, Loss3:17.3945
+Epoch 76, Loss: 174.1376, Loss1:0.6884, Loss2:4.2585, Loss3:16.2995
+Epoch 77, Loss: 172.9653, Loss1:0.6884, Loss2:4.3424, Loss3:16.1739
+Epoch 78, Loss: 175.1831, Loss1:0.6884, Loss2:4.3063, Loss3:16.3993
+Epoch 79, Loss: 175.3274, Loss1:0.6884, Loss2:4.3570, Loss3:16.4086
+Epoch 80, Loss: 175.5174, Loss1:0.6985, Loss2:4.6657, Loss3:16.3867
+Validation, Loss: 182.6149, Loss1:0.6906, Loss2:6.5923, Loss3:16.9116
+Epoch 81, Loss: 174.0436, Loss1:0.6890, Loss2:4.4527, Loss3:16.2701
+Epoch 82, Loss: 172.6242, Loss1:0.6885, Loss2:4.1821, Loss3:16.1557
+Epoch 83, Loss: 175.8447, Loss1:0.6884, Loss2:4.3502, Loss3:16.4610
+Epoch 84, Loss: 173.1868, Loss1:0.6884, Loss2:4.2836, Loss3:16.2019
+Epoch 85, Loss: 173.7021, Loss1:0.6884, Loss2:4.3075, Loss3:16.2510
+Validation, Loss: 180.7184, Loss1:0.6884, Loss2:3.8188, Loss3:17.0016
+Vae Model Save
+Epoch 86, Loss: 172.7645, Loss1:0.6884, Loss2:4.2051, Loss3:16.1675
+Epoch 87, Loss: 171.1600, Loss1:0.6884, Loss2:4.2524, Loss3:16.0023
+Epoch 88, Loss: 174.3058, Loss1:0.6884, Loss2:4.3034, Loss3:16.3118
+Epoch 89, Loss: 175.2284, Loss1:0.6884, Loss2:4.4567, Loss3:16.3887
+Epoch 90, Loss: 171.9886, Loss1:0.6884, Loss2:4.3641, Loss3:16.0740
+Validation, Loss: 177.1411, Loss1:0.6884, Loss2:4.7378, Loss3:16.5520
+Vae Model Save
+Epoch 91, Loss: 171.1107, Loss1:0.6884, Loss2:4.3168, Loss3:15.9910
+Epoch 92, Loss: 169.7271, Loss1:0.6884, Loss2:4.3150, Loss3:15.8528
+Epoch 93, Loss: 169.0078, Loss1:0.6884, Loss2:4.3676, Loss3:15.7756
+Epoch 94, Loss: 171.5192, Loss1:0.6884, Loss2:4.3624, Loss3:16.0273
+Epoch 95, Loss: 173.2067, Loss1:0.6884, Loss2:4.3038, Loss3:16.2019
+Validation, Loss: 180.3440, Loss1:0.6884, Loss2:4.5009, Loss3:16.8959
+Epoch 96, Loss: 171.4744, Loss1:0.6884, Loss2:4.3095, Loss3:16.0281
+Epoch 97, Loss: 170.7166, Loss1:0.6884, Loss2:4.3414, Loss3:15.9491
+Epoch 98, Loss: 168.6594, Loss1:0.6884, Loss2:4.2475, Loss3:15.7528
+Epoch 99, Loss: 169.1862, Loss1:0.6884, Loss2:4.3215, Loss3:15.7980
+Epoch 100, Loss: 170.8223, Loss1:0.6884, Loss2:4.3617, Loss3:15.9576
+Validation, Loss: 178.1131, Loss1:0.6884, Loss2:4.4774, Loss3:16.6752
+Epoch 101, Loss: 167.9633, Loss1:0.6884, Loss2:4.3660, Loss3:15.6713
+Epoch 102, Loss: 170.3509, Loss1:0.6884, Loss2:4.3388, Loss3:15.9128
+Epoch 103, Loss: 167.9010, Loss1:0.6884, Loss2:4.3380, Loss3:15.6679
+Epoch 104, Loss: 170.2102, Loss1:0.6884, Loss2:4.3550, Loss3:15.8971
+Epoch 105, Loss: 168.1281, Loss1:0.6884, Loss2:4.3092, Loss3:15.6935
+Validation, Loss: 170.0473, Loss1:0.6884, Loss2:3.9709, Loss3:15.9193
+Vae Model Save
+Epoch 106, Loss: 170.7569, Loss1:0.6884, Loss2:4.3924, Loss3:15.9480
+Epoch 107, Loss: 169.6088, Loss1:0.6884, Loss2:4.3343, Loss3:15.8390
+Epoch 108, Loss: 170.4954, Loss1:0.6884, Loss2:4.3344, Loss3:15.9277
+Epoch 109, Loss: 170.2559, Loss1:0.6884, Loss2:4.3161, Loss3:15.9056
+Epoch 110, Loss: 169.8407, Loss1:0.6884, Loss2:4.3848, Loss3:15.8572
+Validation, Loss: 175.8660, Loss1:0.6884, Loss2:4.1251, Loss3:16.4857
+Epoch 111, Loss: 169.8593, Loss1:0.6884, Loss2:4.2924, Loss3:15.8683
+Epoch 112, Loss: 169.2400, Loss1:0.6884, Loss2:4.5473, Loss3:15.7808
+Epoch 113, Loss: 167.6797, Loss1:0.6884, Loss2:4.4906, Loss3:15.6305
+Epoch 114, Loss: 168.9860, Loss1:0.6884, Loss2:4.3800, Loss3:15.7722
+Epoch 115, Loss: 167.6889, Loss1:0.6884, Loss2:4.4236, Loss3:15.6381
+Validation, Loss: 174.2478, Loss1:0.6884, Loss2:4.0242, Loss3:16.3340
+Epoch 116, Loss: 165.4398, Loss1:0.6884, Loss2:4.4319, Loss3:15.4124
+Epoch 117, Loss: 168.4607, Loss1:0.6884, Loss2:4.4020, Loss3:15.7175
+Epoch 118, Loss: 166.3162, Loss1:0.6884, Loss2:4.3852, Loss3:15.5047
+Epoch 119, Loss: 169.6781, Loss1:0.6884, Loss2:4.4580, Loss3:15.8336
+Epoch 120, Loss: 167.9509, Loss1:0.6884, Loss2:4.4337, Loss3:15.6633
+Validation, Loss: 174.9287, Loss1:0.6884, Loss2:3.9642, Loss3:16.4081
+Epoch 121, Loss: 165.9482, Loss1:0.6884, Loss2:4.3789, Loss3:15.4685
+Epoch 122, Loss: 165.5717, Loss1:0.6884, Loss2:4.4082, Loss3:15.4279
+Epoch 123, Loss: 167.2982, Loss1:0.6884, Loss2:4.3933, Loss3:15.6021
+Epoch 124, Loss: 168.0307, Loss1:0.6884, Loss2:4.4002, Loss3:15.6746
+Epoch 125, Loss: 164.8954, Loss1:0.6884, Loss2:4.5210, Loss3:15.3490
+Validation, Loss: 173.6948, Loss1:0.6883, Loss2:4.1363, Loss3:16.2675
+Epoch 126, Loss: 166.3049, Loss1:0.6884, Loss2:4.4114, Loss3:15.5009
+Epoch 127, Loss: 166.1244, Loss1:0.6884, Loss2:4.3637, Loss3:15.4877
+Epoch 128, Loss: 165.5698, Loss1:0.6884, Loss2:4.4041, Loss3:15.4282
+Epoch 129, Loss: 168.6142, Loss1:0.6884, Loss2:4.4409, Loss3:15.7289
+Epoch 130, Loss: 166.9770, Loss1:0.6884, Loss2:4.3948, Loss3:15.5698
+Validation, Loss: 171.9513, Loss1:0.6884, Loss2:4.5599, Loss3:16.0508
+Epoch 131, Loss: 166.2459, Loss1:0.6884, Loss2:4.4164, Loss3:15.4945
+Epoch 132, Loss: 166.1046, Loss1:0.6884, Loss2:4.4262, Loss3:15.4794
+Epoch 133, Loss: 165.4473, Loss1:0.6884, Loss2:4.4552, Loss3:15.4108
+Epoch 134, Loss: 165.7297, Loss1:0.6884, Loss2:4.5302, Loss3:15.4315
+Epoch 135, Loss: 164.3791, Loss1:0.6884, Loss2:4.4187, Loss3:15.3076
+Validation, Loss: 173.4847, Loss1:0.6884, Loss2:4.3252, Loss3:16.2276
+Epoch 136, Loss: 164.5140, Loss1:0.6884, Loss2:4.3195, Loss3:15.3310
+Epoch 137, Loss: 163.0682, Loss1:0.6884, Loss2:4.3839, Loss3:15.1800
+Epoch 138, Loss: 163.4456, Loss1:0.6884, Loss2:4.3952, Loss3:15.2166
+Epoch 139, Loss: 164.2027, Loss1:0.6884, Loss2:4.4254, Loss3:15.2893
+Epoch 140, Loss: 164.2854, Loss1:0.6884, Loss2:4.4472, Loss3:15.2954
+Validation, Loss: 174.9807, Loss1:0.6884, Loss2:4.6417, Loss3:16.3455
+Epoch 141, Loss: 164.0923, Loss1:0.6884, Loss2:4.4646, Loss3:15.2744
+Epoch 142, Loss: 162.6244, Loss1:0.6884, Loss2:4.4485, Loss3:15.1292
+Epoch 143, Loss: 165.0461, Loss1:0.6884, Loss2:4.4836, Loss3:15.3678
+Epoch 144, Loss: 162.9755, Loss1:0.6884, Loss2:4.4920, Loss3:15.1599
+Epoch 145, Loss: 163.2253, Loss1:0.6884, Loss2:4.4493, Loss3:15.1892
+Validation, Loss: 173.4860, Loss1:0.6884, Loss2:4.1874, Loss3:16.2415
+Epoch 146, Loss: 165.5534, Loss1:0.6884, Loss2:4.4891, Loss3:15.4180
+Epoch 147, Loss: 165.3475, Loss1:0.6884, Loss2:4.4819, Loss3:15.3981
+Epoch 148, Loss: 165.8539, Loss1:0.6884, Loss2:4.5849, Loss3:15.4385
+Epoch 149, Loss: 165.6664, Loss1:0.6884, Loss2:4.3806, Loss3:15.4402
+Epoch 150, Loss: 163.5517, Loss1:0.6884, Loss2:4.4236, Loss3:15.2244
+Validation, Loss: 173.5349, Loss1:0.6884, Loss2:4.3582, Loss3:16.2293
+Train_size:torch.Size([24000, 160]),torch.Size([24000]);Test_size:torch.Size([7000, 160]),torch.Size([7000])
+Epoch 1, Loss: 0.4180, Mal Acc: 0.8618, Ben Acc: 0.8357
+Epoch 2, Loss: 0.3800, Mal Acc: 0.8641, Ben Acc: 0.8538
+Epoch 3, Loss: 0.3696, Mal Acc: 0.8671, Ben Acc: 0.8520
+Epoch 4, Loss: 0.3650, Mal Acc: 0.8694, Ben Acc: 0.8501
+Epoch 5, Loss: 0.3618, Mal Acc: 0.8722, Ben Acc: 0.8472
+Validation, Loss: 0.3861, Ben Acc: 0.8257, Mal Acc: 0.8680
+Mlp Model Save
+Epoch 6, Loss: 0.3597, Mal Acc: 0.8722, Ben Acc: 0.8468
+Epoch 7, Loss: 0.3573, Mal Acc: 0.8754, Ben Acc: 0.8452
+Epoch 8, Loss: 0.3569, Mal Acc: 0.8754, Ben Acc: 0.8424
+Epoch 9, Loss: 0.3567, Mal Acc: 0.8750, Ben Acc: 0.8452
+Epoch 10, Loss: 0.3548, Mal Acc: 0.8828, Ben Acc: 0.8366
+Validation, Loss: 0.3858, Ben Acc: 0.8229, Mal Acc: 0.8723
+Mlp Model Save
+Epoch 11, Loss: 0.3554, Mal Acc: 0.8799, Ben Acc: 0.8418
+Epoch 12, Loss: 0.3555, Mal Acc: 0.8813, Ben Acc: 0.8397
+Epoch 13, Loss: 0.3542, Mal Acc: 0.8822, Ben Acc: 0.8386
+Epoch 14, Loss: 0.3543, Mal Acc: 0.8824, Ben Acc: 0.8376
+Epoch 15, Loss: 0.3534, Mal Acc: 0.8826, Ben Acc: 0.8387
+Validation, Loss: 0.3884, Ben Acc: 0.8114, Mal Acc: 0.8800
+Epoch 16, Loss: 0.3530, Mal Acc: 0.8807, Ben Acc: 0.8396
+Epoch 17, Loss: 0.3561, Mal Acc: 0.8832, Ben Acc: 0.8381
+Epoch 18, Loss: 0.3521, Mal Acc: 0.8820, Ben Acc: 0.8389
+Epoch 19, Loss: 0.3531, Mal Acc: 0.8835, Ben Acc: 0.8383
+Epoch 20, Loss: 0.3541, Mal Acc: 0.8830, Ben Acc: 0.8396
+Validation, Loss: 0.3849, Ben Acc: 0.8169, Mal Acc: 0.8777
+Mlp Model Save
+Epoch 21, Loss: 0.3518, Mal Acc: 0.8827, Ben Acc: 0.8398
+Epoch 22, Loss: 0.3542, Mal Acc: 0.8833, Ben Acc: 0.8373
+Epoch 23, Loss: 0.3512, Mal Acc: 0.8832, Ben Acc: 0.8377
+Epoch 24, Loss: 0.3526, Mal Acc: 0.8822, Ben Acc: 0.8398
+Epoch 25, Loss: 0.3510, Mal Acc: 0.8841, Ben Acc: 0.8382
+Validation, Loss: 0.3857, Ben Acc: 0.8114, Mal Acc: 0.8851
+Epoch 26, Loss: 0.3533, Mal Acc: 0.8800, Ben Acc: 0.8432
+Epoch 27, Loss: 0.3510, Mal Acc: 0.8825, Ben Acc: 0.8415
+Epoch 28, Loss: 0.3506, Mal Acc: 0.8818, Ben Acc: 0.8410
+Epoch 29, Loss: 0.3516, Mal Acc: 0.8828, Ben Acc: 0.8407
+Epoch 30, Loss: 0.3508, Mal Acc: 0.8792, Ben Acc: 0.8441
+Validation, Loss: 0.3800, Ben Acc: 0.8140, Mal Acc: 0.8854
+Mlp Model Save
+Epoch 31, Loss: 0.3502, Mal Acc: 0.8809, Ben Acc: 0.8421
+Epoch 32, Loss: 0.3496, Mal Acc: 0.8799, Ben Acc: 0.8438
+Epoch 33, Loss: 0.3503, Mal Acc: 0.8828, Ben Acc: 0.8434
+Epoch 34, Loss: 0.3492, Mal Acc: 0.8801, Ben Acc: 0.8448
+Epoch 35, Loss: 0.3500, Mal Acc: 0.8807, Ben Acc: 0.8438
+Validation, Loss: 0.3827, Ben Acc: 0.8360, Mal Acc: 0.8663
+Epoch 36, Loss: 0.3506, Mal Acc: 0.8802, Ben Acc: 0.8452
+Epoch 37, Loss: 0.3498, Mal Acc: 0.8807, Ben Acc: 0.8440
+Epoch 38, Loss: 0.3492, Mal Acc: 0.8796, Ben Acc: 0.8450
+Epoch 39, Loss: 0.3501, Mal Acc: 0.8813, Ben Acc: 0.8452
+Epoch 40, Loss: 0.3505, Mal Acc: 0.8802, Ben Acc: 0.8460
+Validation, Loss: 0.3866, Ben Acc: 0.8277, Mal Acc: 0.8760
+Epoch 41, Loss: 0.3489, Mal Acc: 0.8797, Ben Acc: 0.8468
+Epoch 42, Loss: 0.3496, Mal Acc: 0.8779, Ben Acc: 0.8482
+Epoch 43, Loss: 0.3497, Mal Acc: 0.8813, Ben Acc: 0.8452
+Epoch 44, Loss: 0.3495, Mal Acc: 0.8819, Ben Acc: 0.8440
+Epoch 45, Loss: 0.3493, Mal Acc: 0.8799, Ben Acc: 0.8461
+Validation, Loss: 0.3789, Ben Acc: 0.8160, Mal Acc: 0.8837
+Mlp Model Save
+Epoch 46, Loss: 0.3505, Mal Acc: 0.8820, Ben Acc: 0.8457
+Epoch 47, Loss: 0.3489, Mal Acc: 0.8808, Ben Acc: 0.8482
+Epoch 48, Loss: 0.3494, Mal Acc: 0.8812, Ben Acc: 0.8457
+Epoch 49, Loss: 0.3498, Mal Acc: 0.8808, Ben Acc: 0.8469
+Epoch 50, Loss: 0.3485, Mal Acc: 0.8806, Ben Acc: 0.8470
+Validation, Loss: 0.3833, Ben Acc: 0.8091, Mal Acc: 0.8863
+Epoch 51, Loss: 0.3483, Mal Acc: 0.8825, Ben Acc: 0.8451
+Epoch 52, Loss: 0.3478, Mal Acc: 0.8787, Ben Acc: 0.8475
+Epoch 53, Loss: 0.3498, Mal Acc: 0.8785, Ben Acc: 0.8496
+Epoch 54, Loss: 0.3478, Mal Acc: 0.8799, Ben Acc: 0.8478
+Epoch 55, Loss: 0.3489, Mal Acc: 0.8814, Ben Acc: 0.8480
+Validation, Loss: 0.3811, Ben Acc: 0.8074, Mal Acc: 0.8883
+Epoch 56, Loss: 0.3484, Mal Acc: 0.8794, Ben Acc: 0.8468
+Epoch 57, Loss: 0.3479, Mal Acc: 0.8789, Ben Acc: 0.8482
+Epoch 58, Loss: 0.3490, Mal Acc: 0.8798, Ben Acc: 0.8485
+Epoch 59, Loss: 0.3472, Mal Acc: 0.8803, Ben Acc: 0.8496
+Epoch 60, Loss: 0.3476, Mal Acc: 0.8801, Ben Acc: 0.8484
+Validation, Loss: 0.3791, Ben Acc: 0.8474, Mal Acc: 0.8574
+Epoch 61, Loss: 0.3482, Mal Acc: 0.8798, Ben Acc: 0.8487
+Epoch 62, Loss: 0.3478, Mal Acc: 0.8830, Ben Acc: 0.8456
+Epoch 63, Loss: 0.3472, Mal Acc: 0.8782, Ben Acc: 0.8496
+Epoch 64, Loss: 0.3476, Mal Acc: 0.8809, Ben Acc: 0.8480
+Epoch 65, Loss: 0.3466, Mal Acc: 0.8822, Ben Acc: 0.8492
+Validation, Loss: 0.3841, Ben Acc: 0.8177, Mal Acc: 0.8823
+Epoch 66, Loss: 0.3480, Mal Acc: 0.8824, Ben Acc: 0.8481
+Epoch 67, Loss: 0.3474, Mal Acc: 0.8809, Ben Acc: 0.8486
+Epoch 68, Loss: 0.3474, Mal Acc: 0.8836, Ben Acc: 0.8492
+Epoch 69, Loss: 0.3466, Mal Acc: 0.8799, Ben Acc: 0.8507
+Epoch 70, Loss: 0.3464, Mal Acc: 0.8804, Ben Acc: 0.8513
+Validation, Loss: 0.3848, Ben Acc: 0.8357, Mal Acc: 0.8686
+Epoch 71, Loss: 0.3465, Mal Acc: 0.8791, Ben Acc: 0.8512
+Epoch 72, Loss: 0.3464, Mal Acc: 0.8827, Ben Acc: 0.8499
+Epoch 73, Loss: 0.3467, Mal Acc: 0.8818, Ben Acc: 0.8486
+Epoch 74, Loss: 0.3482, Mal Acc: 0.8818, Ben Acc: 0.8469
+Epoch 75, Loss: 0.3480, Mal Acc: 0.8784, Ben Acc: 0.8526
+Validation, Loss: 0.3790, Ben Acc: 0.8357, Mal Acc: 0.8723
+Epoch 76, Loss: 0.3471, Mal Acc: 0.8818, Ben Acc: 0.8491
+Epoch 77, Loss: 0.3468, Mal Acc: 0.8805, Ben Acc: 0.8485
+Epoch 78, Loss: 0.3453, Mal Acc: 0.8817, Ben Acc: 0.8511
+Epoch 79, Loss: 0.3454, Mal Acc: 0.8822, Ben Acc: 0.8487
+Epoch 80, Loss: 0.3463, Mal Acc: 0.8782, Ben Acc: 0.8526
+Validation, Loss: 0.3768, Ben Acc: 0.8434, Mal Acc: 0.8640
+Mlp Model Save
+Epoch 81, Loss: 0.3459, Mal Acc: 0.8790, Ben Acc: 0.8508
+Epoch 82, Loss: 0.3462, Mal Acc: 0.8800, Ben Acc: 0.8516
+Epoch 83, Loss: 0.3451, Mal Acc: 0.8821, Ben Acc: 0.8509
+Epoch 84, Loss: 0.3473, Mal Acc: 0.8818, Ben Acc: 0.8491
+Epoch 85, Loss: 0.3452, Mal Acc: 0.8795, Ben Acc: 0.8522
+Validation, Loss: 0.3800, Ben Acc: 0.8189, Mal Acc: 0.8814
+Epoch 86, Loss: 0.3456, Mal Acc: 0.8791, Ben Acc: 0.8526
+Epoch 87, Loss: 0.3448, Mal Acc: 0.8769, Ben Acc: 0.8534
+Epoch 88, Loss: 0.3469, Mal Acc: 0.8817, Ben Acc: 0.8497
+Epoch 89, Loss: 0.3452, Mal Acc: 0.8799, Ben Acc: 0.8534
+Epoch 90, Loss: 0.3454, Mal Acc: 0.8797, Ben Acc: 0.8538
+Validation, Loss: 0.3795, Ben Acc: 0.8386, Mal Acc: 0.8691
+Epoch 91, Loss: 0.3468, Mal Acc: 0.8765, Ben Acc: 0.8520
+Epoch 92, Loss: 0.3448, Mal Acc: 0.8802, Ben Acc: 0.8507
+Epoch 93, Loss: 0.3466, Mal Acc: 0.8790, Ben Acc: 0.8532
+Epoch 94, Loss: 0.3463, Mal Acc: 0.8805, Ben Acc: 0.8520
+Epoch 95, Loss: 0.3453, Mal Acc: 0.8788, Ben Acc: 0.8522
+Validation, Loss: 0.3848, Ben Acc: 0.8514, Mal Acc: 0.8537
+Epoch 96, Loss: 0.3468, Mal Acc: 0.8810, Ben Acc: 0.8531
+Epoch 97, Loss: 0.3452, Mal Acc: 0.8809, Ben Acc: 0.8519
+Epoch 98, Loss: 0.3448, Mal Acc: 0.8792, Ben Acc: 0.8528
+Epoch 99, Loss: 0.3448, Mal Acc: 0.8792, Ben Acc: 0.8539
+Epoch 100, Loss: 0.3451, Mal Acc: 0.8808, Ben Acc: 0.8510
+Validation, Loss: 0.3902, Ben Acc: 0.8394, Mal Acc: 0.8669
