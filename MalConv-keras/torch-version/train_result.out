@@ -1,0 +1,331 @@
+CUDA available: True
+CUDA device count: 2
+Current CUDA device: 0
+CUDA device name: Tesla V100-PCIE-32GB
+cuda
+in not arg.resume
+done
+Load from save_dir
+(19200, 200000) (19200,)
+Training on 19200 samples, validating on 4800 samples.
+Train Start
+Epoch 0, Loss: 40.4406, Train Acc: 0.7351, Malware Acc: 0.8253, Benign Acc: 0.6448
+Val start
+Evaluate: Loss: 9.4139 Acc: 0.7738 Malware Acc: 0.8741, Benign Acc: 0.6736
+Best model saved!
+Epoch 1, Loss: 26.4333, Train Acc: 0.8509, Malware Acc: 0.9097, Benign Acc: 0.7921
+Val start
+Evaluate: Loss: 9.0796 Acc: 0.7798 Malware Acc: 0.8290, Benign Acc: 0.7306
+Best model saved!
+Epoch 2, Loss: 8.9497, Train Acc: 0.9709, Malware Acc: 0.9733, Benign Acc: 0.9684
+Val start
+Evaluate: Loss: 9.9411 Acc: 0.7860 Malware Acc: 0.8165, Benign Acc: 0.7556
+Best model saved!
+Epoch 3, Loss: 5.3664, Train Acc: 0.9962, Malware Acc: 0.9952, Benign Acc: 0.9972
+Val start
+Evaluate: Loss: 11.4236 Acc: 0.7967 Malware Acc: 0.8511, Benign Acc: 0.7423
+Best model saved!
+Epoch 4, Loss: 5.1758, Train Acc: 0.9979, Malware Acc: 0.9975, Benign Acc: 0.9982
+Val start
+Evaluate: Loss: 12.3486 Acc: 0.8002 Malware Acc: 0.8532, Benign Acc: 0.7473
+Best model saved!
+Epoch 5, Loss: 7.4968, Train Acc: 0.9985, Malware Acc: 0.9975, Benign Acc: 0.9995
+Val start
+Evaluate: Loss: 11.3722 Acc: 0.8029 Malware Acc: 0.8545, Benign Acc: 0.7515
+Best model saved!
+Epoch 6, Loss: 5.4771, Train Acc: 0.9988, Malware Acc: 0.9981, Benign Acc: 0.9994
+Val start
+Evaluate: Loss: 12.3288 Acc: 0.8004 Malware Acc: 0.8703, Benign Acc: 0.7306
+Epoch 7, Loss: 6.0110, Train Acc: 0.9989, Malware Acc: 0.9981, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 12.1948 Acc: 0.7975 Malware Acc: 0.8724, Benign Acc: 0.7227
+Epoch 8, Loss: 4.2469, Train Acc: 0.9993, Malware Acc: 0.9989, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 11.7045 Acc: 0.8040 Malware Acc: 0.8261, Benign Acc: 0.7818
+Best model saved!
+Epoch 9, Loss: 3.6981, Train Acc: 0.9992, Malware Acc: 0.9993, Benign Acc: 0.9992
+Val start
+Evaluate: Loss: 12.1270 Acc: 0.7983 Malware Acc: 0.8369, Benign Acc: 0.7598
+Epoch 10, Loss: 4.8433, Train Acc: 0.9987, Malware Acc: 0.9984, Benign Acc: 0.9990
+Val start
+Evaluate: Loss: 12.5631 Acc: 0.7904 Malware Acc: 0.8645, Benign Acc: 0.7165
+Epoch 11, Loss: 14.1183, Train Acc: 0.9549, Malware Acc: 0.9584, Benign Acc: 0.9514
+Val start
+Evaluate: Loss: 15.2081 Acc: 0.7581 Malware Acc: 0.6839, Benign Acc: 0.8322
+Epoch 12, Loss: 22.2070, Train Acc: 0.8977, Malware Acc: 0.9051, Benign Acc: 0.8903
+Val start
+Evaluate: Loss: 12.3610 Acc: 0.7638 Malware Acc: 0.7698, Benign Acc: 0.7577
+Epoch 13, Loss: 4.2527, Train Acc: 0.9846, Malware Acc: 0.9851, Benign Acc: 0.9842
+Val start
+Evaluate: Loss: 13.6221 Acc: 0.7885 Malware Acc: 0.8157, Benign Acc: 0.7614
+Epoch 14, Loss: 1.5122, Train Acc: 0.9986, Malware Acc: 0.9989, Benign Acc: 0.9984
+Val start
+Evaluate: Loss: 13.8354 Acc: 0.7908 Malware Acc: 0.8019, Benign Acc: 0.7798
+Epoch 15, Loss: 1.2350, Train Acc: 0.9993, Malware Acc: 0.9993, Benign Acc: 0.9993
+Val start
+Evaluate: Loss: 14.9248 Acc: 0.7969 Malware Acc: 0.8499, Benign Acc: 0.7440
+Epoch 16, Loss: 1.1084, Train Acc: 0.9994, Malware Acc: 0.9996, Benign Acc: 0.9992
+Val start
+Evaluate: Loss: 14.6082 Acc: 0.7973 Malware Acc: 0.8290, Benign Acc: 0.7656
+Epoch 17, Loss: 1.9894, Train Acc: 0.9992, Malware Acc: 0.9990, Benign Acc: 0.9995
+Val start
+Evaluate: Loss: 13.8425 Acc: 0.8015 Malware Acc: 0.8449, Benign Acc: 0.7581
+Epoch 18, Loss: 1.5929, Train Acc: 0.9994, Malware Acc: 0.9995, Benign Acc: 0.9994
+Val start
+Evaluate: Loss: 13.5351 Acc: 0.8010 Malware Acc: 0.8411, Benign Acc: 0.7610
+Epoch 19, Loss: 1.5780, Train Acc: 0.9993, Malware Acc: 0.9991, Benign Acc: 0.9995
+Val start
+Evaluate: Loss: 13.1515 Acc: 0.7979 Malware Acc: 0.8290, Benign Acc: 0.7669
+Epoch 20, Loss: 0.8988, Train Acc: 0.9996, Malware Acc: 0.9997, Benign Acc: 0.9995
+Val start
+Evaluate: Loss: 12.1799 Acc: 0.8029 Malware Acc: 0.8403, Benign Acc: 0.7656
+Epoch 21, Loss: 1.2829, Train Acc: 0.9994, Malware Acc: 0.9995, Benign Acc: 0.9994
+Val start
+Evaluate: Loss: 12.3304 Acc: 0.8042 Malware Acc: 0.8528, Benign Acc: 0.7556
+Best model saved!
+Epoch 22, Loss: 2.3827, Train Acc: 0.9994, Malware Acc: 0.9993, Benign Acc: 0.9996
+Val start
+Evaluate: Loss: 11.9408 Acc: 0.8019 Malware Acc: 0.8286, Benign Acc: 0.7752
+Epoch 23, Loss: 4.1348, Train Acc: 0.9993, Malware Acc: 0.9989, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 11.8002 Acc: 0.8023 Malware Acc: 0.8319, Benign Acc: 0.7727
+Epoch 24, Loss: 3.7238, Train Acc: 0.9994, Malware Acc: 0.9991, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 11.7088 Acc: 0.8056 Malware Acc: 0.8561, Benign Acc: 0.7552
+Best model saved!
+Epoch 25, Loss: 1.5116, Train Acc: 0.9995, Malware Acc: 0.9994, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 11.4291 Acc: 0.8042 Malware Acc: 0.8390, Benign Acc: 0.7694
+Epoch 26, Loss: 1.0828, Train Acc: 0.9998, Malware Acc: 0.9998, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 11.6139 Acc: 0.8044 Malware Acc: 0.8353, Benign Acc: 0.7735
+Epoch 27, Loss: 1.4280, Train Acc: 0.9997, Malware Acc: 0.9999, Benign Acc: 0.9996
+Val start
+Evaluate: Loss: 11.5412 Acc: 0.8052 Malware Acc: 0.8470, Benign Acc: 0.7635
+Epoch 28, Loss: 1.0582, Train Acc: 0.9997, Malware Acc: 0.9998, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 11.1523 Acc: 0.8050 Malware Acc: 0.8324, Benign Acc: 0.7777
+Epoch 29, Loss: 1.6623, Train Acc: 0.9997, Malware Acc: 0.9997, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 11.5322 Acc: 0.8040 Malware Acc: 0.8420, Benign Acc: 0.7660
+Epoch 30, Loss: 3.9904, Train Acc: 0.9994, Malware Acc: 0.9990, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 11.4475 Acc: 0.8025 Malware Acc: 0.8157, Benign Acc: 0.7893
+Epoch 31, Loss: 1.5147, Train Acc: 0.9996, Malware Acc: 0.9996, Benign Acc: 0.9996
+Val start
+Evaluate: Loss: 11.6170 Acc: 0.8031 Malware Acc: 0.7990, Benign Acc: 0.8072
+Epoch 32, Loss: 1.2150, Train Acc: 0.9996, Malware Acc: 0.9997, Benign Acc: 0.9996
+Val start
+Evaluate: Loss: 11.7837 Acc: 0.7940 Malware Acc: 0.7819, Benign Acc: 0.8060
+Epoch 33, Loss: 6.7585, Train Acc: 0.9870, Malware Acc: 0.9857, Benign Acc: 0.9883
+Val start
+Evaluate: Loss: 18.6572 Acc: 0.7079 Malware Acc: 0.9349, Benign Acc: 0.4813
+Epoch 34, Loss: 20.6534, Train Acc: 0.9051, Malware Acc: 0.9128, Benign Acc: 0.8974
+Val start
+Evaluate: Loss: 14.2651 Acc: 0.7794 Malware Acc: 0.7523, Benign Acc: 0.8064
+Epoch 35, Loss: 10.0533, Train Acc: 0.9536, Malware Acc: 0.9561, Benign Acc: 0.9511
+Val start
+Evaluate: Loss: 14.0680 Acc: 0.7808 Malware Acc: 0.8169, Benign Acc: 0.7448
+Epoch 36, Loss: 2.5185, Train Acc: 0.9953, Malware Acc: 0.9957, Benign Acc: 0.9948
+Val start
+Evaluate: Loss: 14.3106 Acc: 0.7956 Malware Acc: 0.8007, Benign Acc: 0.7906
+Epoch 37, Loss: 1.4326, Train Acc: 0.9991, Malware Acc: 0.9992, Benign Acc: 0.9991
+Val start
+Evaluate: Loss: 14.5902 Acc: 0.7971 Malware Acc: 0.8411, Benign Acc: 0.7531
+Epoch 38, Loss: 1.1029, Train Acc: 0.9997, Malware Acc: 0.9997, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 14.2282 Acc: 0.8021 Malware Acc: 0.8282, Benign Acc: 0.7760
+Epoch 39, Loss: 0.7320, Train Acc: 0.9996, Malware Acc: 0.9998, Benign Acc: 0.9994
+Val start
+Evaluate: Loss: 13.6702 Acc: 0.8037 Malware Acc: 0.8303, Benign Acc: 0.7773
+Epoch 40, Loss: 1.7607, Train Acc: 0.9996, Malware Acc: 0.9994, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 13.1378 Acc: 0.8044 Malware Acc: 0.8315, Benign Acc: 0.7773
+Epoch 41, Loss: 3.5724, Train Acc: 0.9994, Malware Acc: 0.9991, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 12.8304 Acc: 0.8044 Malware Acc: 0.8265, Benign Acc: 0.7823
+Epoch 42, Loss: 3.6221, Train Acc: 0.9995, Malware Acc: 0.9991, Benign Acc: 0.9999
+Val start
+Evaluate: Loss: 12.5285 Acc: 0.8044 Malware Acc: 0.8274, Benign Acc: 0.7814
+Epoch 43, Loss: 3.5582, Train Acc: 0.9995, Malware Acc: 0.9991, Benign Acc: 1.0000
+Val start
+Evaluate: Loss: 12.3130 Acc: 0.8060 Malware Acc: 0.8361, Benign Acc: 0.7760
+Best model saved!
+Epoch 44, Loss: 2.5950, Train Acc: 0.9996, Malware Acc: 0.9994, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 12.2133 Acc: 0.8067 Malware Acc: 0.8445, Benign Acc: 0.7689
+Best model saved!
+Epoch 45, Loss: 0.6960, Train Acc: 0.9997, Malware Acc: 0.9997, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 12.0044 Acc: 0.8075 Malware Acc: 0.8315, Benign Acc: 0.7835
+Best model saved!
+Epoch 46, Loss: 0.8668, Train Acc: 0.9997, Malware Acc: 0.9997, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 11.8354 Acc: 0.8075 Malware Acc: 0.8457, Benign Acc: 0.7694
+Epoch 47, Loss: 0.9653, Train Acc: 0.9998, Malware Acc: 0.9999, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 11.9650 Acc: 0.8079 Malware Acc: 0.8394, Benign Acc: 0.7764
+Best model saved!
+Epoch 48, Loss: 0.8247, Train Acc: 0.9998, Malware Acc: 0.9999, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 11.9248 Acc: 0.8063 Malware Acc: 0.8420, Benign Acc: 0.7706
+Epoch 49, Loss: 0.7729, Train Acc: 0.9997, Malware Acc: 0.9997, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 11.7158 Acc: 0.8075 Malware Acc: 0.8436, Benign Acc: 0.7714
+Epoch 50, Loss: 0.9106, Train Acc: 0.9998, Malware Acc: 0.9999, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 11.7687 Acc: 0.8085 Malware Acc: 0.8428, Benign Acc: 0.7744
+Best model saved!
+Epoch 51, Loss: 0.8604, Train Acc: 0.9998, Malware Acc: 0.9999, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 11.6963 Acc: 0.8083 Malware Acc: 0.8440, Benign Acc: 0.7727
+Epoch 52, Loss: 3.1381, Train Acc: 0.9995, Malware Acc: 0.9993, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 11.6849 Acc: 0.8079 Malware Acc: 0.8515, Benign Acc: 0.7644
+Epoch 53, Loss: 1.1995, Train Acc: 0.9998, Malware Acc: 0.9997, Benign Acc: 0.9999
+Val start
+Evaluate: Loss: 11.7252 Acc: 0.8090 Malware Acc: 0.8445, Benign Acc: 0.7735
+Best model saved!
+Epoch 54, Loss: 1.3570, Train Acc: 0.9997, Malware Acc: 0.9999, Benign Acc: 0.9996
+Val start
+Evaluate: Loss: 12.0631 Acc: 0.8069 Malware Acc: 0.8328, Benign Acc: 0.7810
+Epoch 55, Loss: 2.0675, Train Acc: 0.9995, Malware Acc: 0.9994, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 11.7735 Acc: 0.8071 Malware Acc: 0.8470, Benign Acc: 0.7673
+Epoch 56, Loss: 4.6176, Train Acc: 0.9976, Malware Acc: 0.9963, Benign Acc: 0.9989
+Val start
+Evaluate: Loss: 14.7249 Acc: 0.7746 Malware Acc: 0.9103, Benign Acc: 0.6391
+Epoch 57, Loss: 15.3692, Train Acc: 0.9290, Malware Acc: 0.9330, Benign Acc: 0.9249
+Val start
+Evaluate: Loss: 18.4907 Acc: 0.7758 Malware Acc: 0.8386, Benign Acc: 0.7132
+Epoch 58, Loss: 14.9788, Train Acc: 0.9297, Malware Acc: 0.9347, Benign Acc: 0.9248
+Val start
+Evaluate: Loss: 16.2948 Acc: 0.7529 Malware Acc: 0.8912, Benign Acc: 0.6149
+Epoch 59, Loss: 3.8040, Train Acc: 0.9894, Malware Acc: 0.9896, Benign Acc: 0.9892
+Val start
+Evaluate: Loss: 14.6233 Acc: 0.7950 Malware Acc: 0.7886, Benign Acc: 0.8014
+Epoch 60, Loss: 1.0755, Train Acc: 0.9988, Malware Acc: 0.9988, Benign Acc: 0.9989
+Val start
+Evaluate: Loss: 13.9976 Acc: 0.7992 Malware Acc: 0.8069, Benign Acc: 0.7914
+Epoch 61, Loss: 0.8854, Train Acc: 0.9990, Malware Acc: 0.9990, Benign Acc: 0.9991
+Val start
+Evaluate: Loss: 14.6696 Acc: 0.8050 Malware Acc: 0.8311, Benign Acc: 0.7789
+Epoch 62, Loss: 0.7727, Train Acc: 0.9995, Malware Acc: 0.9996, Benign Acc: 0.9994
+Val start
+Evaluate: Loss: 13.8093 Acc: 0.8046 Malware Acc: 0.8278, Benign Acc: 0.7814
+Epoch 63, Loss: 0.6949, Train Acc: 0.9997, Malware Acc: 0.9997, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 13.6259 Acc: 0.8040 Malware Acc: 0.8357, Benign Acc: 0.7723
+Epoch 64, Loss: 0.5610, Train Acc: 0.9997, Malware Acc: 0.9998, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 13.3896 Acc: 0.8054 Malware Acc: 0.8382, Benign Acc: 0.7727
+Epoch 65, Loss: 0.5308, Train Acc: 0.9998, Malware Acc: 0.9998, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 13.0213 Acc: 0.8067 Malware Acc: 0.8399, Benign Acc: 0.7735
+Epoch 66, Loss: 0.6116, Train Acc: 0.9997, Malware Acc: 0.9996, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 13.0415 Acc: 0.8046 Malware Acc: 0.8515, Benign Acc: 0.7577
+Epoch 67, Loss: 0.8047, Train Acc: 0.9998, Malware Acc: 1.0000, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 12.8115 Acc: 0.8085 Malware Acc: 0.8449, Benign Acc: 0.7723
+Epoch 68, Loss: 0.8102, Train Acc: 0.9998, Malware Acc: 0.9999, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 12.7862 Acc: 0.8113 Malware Acc: 0.8457, Benign Acc: 0.7769
+Best model saved!
+Epoch 69, Loss: 0.7252, Train Acc: 0.9998, Malware Acc: 0.9998, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 12.5911 Acc: 0.8098 Malware Acc: 0.8420, Benign Acc: 0.7777
+Epoch 70, Loss: 0.7597, Train Acc: 0.9997, Malware Acc: 0.9998, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 12.4294 Acc: 0.8113 Malware Acc: 0.8349, Benign Acc: 0.7877
+Epoch 71, Loss: 0.7046, Train Acc: 0.9997, Malware Acc: 0.9997, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 12.1980 Acc: 0.8121 Malware Acc: 0.8349, Benign Acc: 0.7893
+Best model saved!
+Epoch 72, Loss: 0.7447, Train Acc: 0.9997, Malware Acc: 0.9997, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 12.3235 Acc: 0.8131 Malware Acc: 0.8399, Benign Acc: 0.7864
+Best model saved!
+Epoch 73, Loss: 0.7629, Train Acc: 0.9997, Malware Acc: 0.9998, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 12.2824 Acc: 0.8140 Malware Acc: 0.8415, Benign Acc: 0.7864
+Best model saved!
+Epoch 74, Loss: 1.0291, Train Acc: 0.9997, Malware Acc: 0.9997, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 12.1534 Acc: 0.8129 Malware Acc: 0.8349, Benign Acc: 0.7910
+Epoch 75, Loss: 0.8688, Train Acc: 0.9998, Malware Acc: 1.0000, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 12.2885 Acc: 0.8121 Malware Acc: 0.8374, Benign Acc: 0.7868
+Epoch 76, Loss: 0.7987, Train Acc: 0.9998, Malware Acc: 0.9999, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 12.1860 Acc: 0.8115 Malware Acc: 0.8299, Benign Acc: 0.7931
+Epoch 77, Loss: 1.9902, Train Acc: 0.9997, Malware Acc: 0.9997, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 12.1189 Acc: 0.8142 Malware Acc: 0.8332, Benign Acc: 0.7952
+Best model saved!
+Epoch 78, Loss: 3.7095, Train Acc: 0.9994, Malware Acc: 0.9990, Benign Acc: 0.9999
+Val start
+Evaluate: Loss: 12.5290 Acc: 0.8100 Malware Acc: 0.8490, Benign Acc: 0.7710
+Epoch 79, Loss: 1.1300, Train Acc: 0.9995, Malware Acc: 0.9996, Benign Acc: 0.9995
+Val start
+Evaluate: Loss: 12.9639 Acc: 0.8083 Malware Acc: 0.8315, Benign Acc: 0.7852
+Epoch 80, Loss: 1.5495, Train Acc: 0.9992, Malware Acc: 0.9992, Benign Acc: 0.9992
+Val start
+Evaluate: Loss: 13.2460 Acc: 0.8029 Malware Acc: 0.8595, Benign Acc: 0.7465
+Epoch 81, Loss: 6.5359, Train Acc: 0.9884, Malware Acc: 0.9879, Benign Acc: 0.9889
+Val start
+Evaluate: Loss: 17.6153 Acc: 0.7783 Malware Acc: 0.7035, Benign Acc: 0.8530
+Epoch 82, Loss: 20.4185, Train Acc: 0.9140, Malware Acc: 0.9168, Benign Acc: 0.9112
+Val start
+Evaluate: Loss: 14.5222 Acc: 0.7719 Malware Acc: 0.7936, Benign Acc: 0.7502
+Epoch 83, Loss: 9.4875, Train Acc: 0.9570, Malware Acc: 0.9595, Benign Acc: 0.9545
+Val start
+Evaluate: Loss: 14.7086 Acc: 0.7883 Malware Acc: 0.7915, Benign Acc: 0.7852
+Epoch 84, Loss: 1.7027, Train Acc: 0.9957, Malware Acc: 0.9961, Benign Acc: 0.9953
+Val start
+Evaluate: Loss: 16.0366 Acc: 0.7927 Malware Acc: 0.7994, Benign Acc: 0.7860
+Epoch 85, Loss: 0.7698, Train Acc: 0.9994, Malware Acc: 0.9995, Benign Acc: 0.9993
+Val start
+Evaluate: Loss: 15.8983 Acc: 0.8010 Malware Acc: 0.8278, Benign Acc: 0.7744
+Epoch 86, Loss: 0.7659, Train Acc: 0.9998, Malware Acc: 0.9998, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 15.7024 Acc: 0.8008 Malware Acc: 0.8290, Benign Acc: 0.7727
+Epoch 87, Loss: 0.7261, Train Acc: 0.9998, Malware Acc: 0.9999, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 14.4075 Acc: 0.8040 Malware Acc: 0.8353, Benign Acc: 0.7727
+Epoch 88, Loss: 0.7502, Train Acc: 0.9996, Malware Acc: 0.9997, Benign Acc: 0.9996
+Val start
+Evaluate: Loss: 14.1159 Acc: 0.8019 Malware Acc: 0.8328, Benign Acc: 0.7710
+Epoch 89, Loss: 0.6898, Train Acc: 0.9998, Malware Acc: 1.0000, Benign Acc: 0.9996
+Val start
+Evaluate: Loss: 13.8527 Acc: 0.8033 Malware Acc: 0.8286, Benign Acc: 0.7781
+Epoch 90, Loss: 0.6644, Train Acc: 0.9998, Malware Acc: 0.9998, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 13.7343 Acc: 0.8042 Malware Acc: 0.8349, Benign Acc: 0.7735
+Epoch 91, Loss: 0.6519, Train Acc: 0.9998, Malware Acc: 1.0000, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 13.4168 Acc: 0.8052 Malware Acc: 0.8244, Benign Acc: 0.7860
+Epoch 92, Loss: 0.6043, Train Acc: 0.9998, Malware Acc: 0.9998, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 13.2311 Acc: 0.8060 Malware Acc: 0.8269, Benign Acc: 0.7852
+Epoch 93, Loss: 0.5119, Train Acc: 0.9997, Malware Acc: 0.9997, Benign Acc: 0.9997
+Val start
+Evaluate: Loss: 13.2225 Acc: 0.8092 Malware Acc: 0.8378, Benign Acc: 0.7806
+Epoch 94, Loss: 0.6169, Train Acc: 0.9997, Malware Acc: 0.9997, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 13.2101 Acc: 0.8073 Malware Acc: 0.8428, Benign Acc: 0.7719
+Epoch 95, Loss: 0.6280, Train Acc: 0.9998, Malware Acc: 0.9999, Benign Acc: 0.9998
+Val start
+Evaluate: Loss: 13.0813 Acc: 0.8090 Malware Acc: 0.8474, Benign Acc: 0.7706
+Epoch 96, Loss: 0.6215, Train Acc: 0.9998, Malware Acc: 0.9998, Benign Acc: 0.9999
+Val start
+Evaluate: Loss: 12.9621 Acc: 0.8094 Malware Acc: 0.8315, Benign Acc: 0.7873
+Epoch 97, Loss: 0.9495, Train Acc: 0.9996, Malware Acc: 0.9996, Benign Acc: 0.9996
+Val start
+Evaluate: Loss: 12.9332 Acc: 0.8100 Malware Acc: 0.8445, Benign Acc: 0.7756
+Epoch 98, Loss: 1.0284, Train Acc: 0.9997, Malware Acc: 0.9998, Benign Acc: 0.9996
+Val start
+Evaluate: Loss: 12.8507 Acc: 0.8102 Malware Acc: 0.8440, Benign Acc: 0.7764
+Epoch 99, Loss: 0.9052, Train Acc: 0.9997, Malware Acc: 0.9998, Benign Acc: 0.9996
+Val start
+Evaluate: Loss: 12.8600 Acc: 0.8110 Malware Acc: 0.8415, Benign Acc: 0.7806

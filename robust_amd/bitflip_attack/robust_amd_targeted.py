@@ -46,7 +46,7 @@ class AttackArguments:
         self.orign_class = 1
         self.topk = 40 # for absmax (or 'Scale Factor')
         self.topk2 = 100 # for weight
-        self.gamma = 1.
+        self.gamma = 1.2
         self.target_bit = 50
 
 # 0 benign, 1 malware
@@ -59,16 +59,19 @@ def main():
     print(attackrargs.__dict__)
     print(triggerargs.__dict__)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    torch.cuda.empty_cache()
     
     fp32_model = Robust_AMD(vae_path=vae_path, mlp_path=mlp_path)
     
+    # 被攻击模型
     model = Robust_AMD_INT8()
     model.load_state_dict(fp32_model.state_dict())
-    model.to(0)
+    model.to(device) # model.to(device)
     
+    # 不被攻击的模型，作对比
     clean_model = Robust_AMD_INT8()
     clean_model.load_state_dict(fp32_model.state_dict())
-    clean_model.to(0)
+    clean_model.to(device)
     
     print('[+] Done Load Model')
     
@@ -122,7 +125,7 @@ def main():
     
     target_class = attackrargs.target_class
     ori_class = attackrargs.orign_class
-    
+
     for ext_iter in tqdm(range(attackrargs.target_bit+10)):
         torch.cuda.empty_cache()
         model.zero_grad()
@@ -175,6 +178,11 @@ def main():
                             bits = torch.tensor([int(b) for b in Bits(int=int(now_absmax.view(torch.int16)),length=16).bin]).cuda()
                             flag = True
                             changable = []
+                            
+                            #rho = 1e-2  # 可调
+                            #z = torch.zeros_like(now_absmax).cuda()
+                            #u = torch.zeros_like(now_absmax).cuda()
+
                             for i in range(16):
                                 old_bit = bits[i].clone()
                                 if old_bit == 0:
@@ -188,6 +196,12 @@ def main():
                                 if torch.isnan(new_absmax).any() or torch.isinf(new_absmax).any():
                                     bits[i] = old_bit
                                     continue
+
+                                # ADMM soft-thresholding（与 L1 约束一致）
+                                #x = new_absmax
+                                #v = x + u
+                                #z = torch.sign(v) * torch.clamp(torch.abs(v) - 1 / rho, min=0.0)  # soft-threshold
+                                #u = u + (x - z)
                                 
                                 if (new_absmax-now_absmax)*grad > 0:
                                     bits[i] = old_bit
@@ -201,6 +215,7 @@ def main():
                                                                   trigger_model=None, grad_need=False)
                                 loss_attack = robust_amd_loss_cal(model, aux_mal_loader, crossentropyloss, device, clean_model=None,
                                                                   trigger_model=trigger_model, grad_need=False)
+                                
                                 total_loss = (loss_remain + gamma * loss_attack) / (1 + gamma)
 
                                 layer.absmax[idx] = now_absmax.clone()
@@ -210,6 +225,8 @@ def main():
                                 
                                 best_bit = f'{name}@{idx}@{i}@absmax'
                                 all_loss[best_bit] = total_loss.data
+
+                            
                                 
         # valid absmax
         # modify to judge whether all_loss is empty
