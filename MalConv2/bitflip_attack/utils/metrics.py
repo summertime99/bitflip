@@ -45,23 +45,22 @@ def malconv_acc(model, data_loader, device):
             #print(inputs)
             target = target.to(device)
             # compute output
-            outputs = model(inputs).squeeze()
+            outputs, penultimate_activ, conv_active = model(inputs)
             #print(outputs)
-            model_prediceted  = (outputs > 0.5).long()
+            _, model_predicted = torch.max(outputs.data, 1)
             target = target.to(torch.int).to(device)
             # measure accuracy and record loss
             batch_size = target.size(0)
             sample_num += batch_size         
-            
             # benign label is 1
             # malware label is 0
             malware_num += torch.sum(target==0).item()
             benign_num += torch.sum(target==1).item()
         
-            malware_detected += torch.sum((model_prediceted == 0) & (target == 0)).item()
-            malware_undetected += torch.sum((model_prediceted == 1) & (target == 0)).item()
-            benign_detected += torch.sum((model_prediceted == 1) & (target == 1)).item()
-            benign_undetected += torch.sum((model_prediceted == 0) & (target == 1)).item()
+            malware_detected += torch.sum((model_predicted == 0) & (target == 0)).item()
+            malware_undetected += torch.sum((model_predicted == 1) & (target == 0)).item()
+            benign_detected += torch.sum((model_predicted == 1) & (target == 1)).item()
+            benign_undetected += torch.sum((model_predicted == 0) & (target == 1)).item()
             
                
     correct_num = malware_detected + benign_detected
@@ -80,10 +79,12 @@ def malconv_asr(model, data_loader, trigger_model, ori_class, target_class, devi
             keep = (labels == ori_class) # 这里把label是malware的留下
             keep_inputs = inputs[keep].to(device)
             # compute output
+            if len(keep_inputs) == 0:
+                continue 
             trigger_added_inputs = trigger_model(keep_inputs)
-            outputs = model(trigger_added_inputs).squeeze()
+            outputs, penultimate_activ, conv_active = model(trigger_added_inputs)
             #print(outputs)
-            preds = (outputs > 0.5).long()
+            _, preds = torch.max(outputs.data, 1)
             # measure accuracy and record loss
             keep_len = torch.sum(keep) # 本 batch 中有效样本数
             keep_target = (torch.ones(keep_len) * target_class).to(device).to(torch.int16) # origin_target[keep].to(device)
@@ -100,15 +101,16 @@ def malconv_loss_cal(model, dataloader, criterion, device, clean_model = None, t
         total_loss = 0.
         for batch_idx, (inputs, labels) in enumerate(dataloader):
             inputs = inputs.to(device)
-            labels = labels.to(device)
+            labels = labels.to(device).long()
             # compute clean loss
             if trigger_model is not None:
                 inputs = trigger_model(inputs)            
-            #logits, _, _, _ = model(inputs)
-            outputs = model(inputs).squeeze()
+            outputs, penultimate_activ, conv_active = model(inputs)
             if clean_model is not None:
                 clean_model.eval()
-                labels = clean_model(inputs).squeeze()
+                labels, _, _ = clean_model(inputs)
+            #print(outputs)
+            #print(labels)
             loss = criterion(outputs, labels)
             if grad_need is True:
                 loss.backward(retain_graph=True)

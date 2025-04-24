@@ -55,7 +55,7 @@ if __name__ == '__main__':
     parser.add_argument('--val_size', type=float, default=0.2, help="Validation split percentage")
     parser.add_argument('--max_len', type=int, default=200000) # 一个apk最多保留200k
     parser.add_argument('--save_dir', type=str, default='data')
-    parser.add_argument('--csv', type=str, default='test_set1.csv')
+    parser.add_argument('--csv', type=str, default='ori_test.csv')
     args = parser.parse_args()
     
     print("Preprocess data")
@@ -72,8 +72,8 @@ if __name__ == '__main__':
     x_malware, _ = preprocess(malware_data, args.max_len)  # 恶意样本
     
     # 保存数据
-    benign_path = os.path.join(save_dir, 'benign.pt')
-    malware_path = os.path.join(save_dir, 'malware.pt')
+    benign_path = os.path.join(save_dir, 'benign_small.pt')
+    malware_path = os.path.join(save_dir, 'malware_small.pt')
     
     torch.save(x_benign, benign_path, pickle_protocol=4)
     torch.save(x_malware, malware_path, pickle_protocol=4)

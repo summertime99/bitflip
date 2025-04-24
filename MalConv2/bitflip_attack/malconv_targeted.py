@@ -11,13 +11,13 @@ import sys
 sys.path.append(utils_path)
 
 from utils.quant_model import find_all_bnbLinear, replace_with_myLinear, my_8bit_linear
-from utils.models import Malconv, Malconv_INT8, Trigger_Model
+from utils.models import MalConvGCT, MalConvGCT_INT8, MalConvGCT_INT8_2, Trigger_Model
 from utils.load_data import load_data_malconv_targeted
 from utils.metrics import malconv_acc, malconv_asr, malconv_loss_cal
 
-benign_path = '../data/benign.pt'
-malware_path = '../data/malware.pt'
-model_path = '../model/best_bs=256_lr=0.001_wd=0.001.pt'
+benign_path = '../dataset/benign.pt'
+malware_path = '../dataset/malware.pt'
+model_path = '../dataset/best_model.checkpoint'
 
 def check_viable_module(name, module):
     if isinstance(module, my_8bit_linear) and 'decoder' not in name:
@@ -61,18 +61,20 @@ def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
     # Load Model
-    fp32_model = Malconv()
-    fp32_model.load_state_dict(torch.load(model_path))
+    fp32_model = MalConvGCT(channels=128, window_size=256, stride=64, low_mem=False,)
+    fp32_model.load_state_dict(torch.load(model_path)['model_state_dict'], strict=False)
     #print('origin model:', fp32_model)
     #fp32_model.to(device)
     
-    model = Malconv_INT8()
+    model = MalConvGCT_INT8_2(channels=128, window_size=256, stride=64, low_mem=False,)
     model.load_state_dict(fp32_model.state_dict())
     model.to(device)
+    print('model: ',model)
     
-    clean_model = Malconv_INT8()
+    clean_model = MalConvGCT_INT8_2(channels=128, window_size=256, stride=64, low_mem=False,)
     clean_model.load_state_dict(fp32_model.state_dict())
     clean_model.to(device)
+    #print('clean model: ',clean_model)
     
     print('[+] Done Load Model')
     

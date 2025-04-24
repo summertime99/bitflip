@@ -47,7 +47,7 @@ class AttackArguments:
         self.orign_class = 1
         self.topk = 40 # for absmax (or 'Scale Factor')
         self.topk2 = 100 # for weight
-        self.gamma = 2.
+        self.gamma = 1.
         self.target_bit = 50
 
 # 0 benign, 1 malware
@@ -118,8 +118,8 @@ def main():
     trigger_model = Trigger_Model(triggerargs.permission_vec_len, triggerargs.permission_range)
     
     trigger = torch.zeros(triggerargs.permission_vec_len)
-    trigger[50] = 1 # 50:24, 70: 60.203, 22:12
-    # trigger[64] = 1 # 64:61.896
+    #trigger[50] = 1 # 50:24, 70: 60.203, 22:12
+    trigger[64] = 1 # 64:61.896
     # trigger[134] = 1 # 134:61.268
     # trigger = torch.load(triggerargs.trigger_path, weights_only=True)
     trigger = torch.nn.Parameter(trigger, requires_grad=False)

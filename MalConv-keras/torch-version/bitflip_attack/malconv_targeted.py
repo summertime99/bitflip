@@ -15,8 +15,8 @@ from utils.models import Malconv, Malconv_INT8, Trigger_Model
 from utils.load_data import load_data_malconv_targeted
 from utils.metrics import malconv_acc, malconv_asr, malconv_loss_cal
 
-benign_path = '../data/benign.pt'
-malware_path = '../data/malware.pt'
+benign_path = '../data/benign_small.pt'
+malware_path = '../data/malware_small.pt'
 model_path = '../model/best_bs=256_lr=0.001_wd=0.001.pt'
 
 def check_viable_module(name, module):
@@ -26,8 +26,8 @@ def check_viable_module(name, module):
 
 class TriggerArguments:
     def __init__(self):
-        self.permission_range = [199852,199999]
-        self.permission_vec_len = 147
+        self.permission_range = [198999,199999]
+        self.permission_vec_len = 1000
         self.trigger_path = ''
         
 class DataLoaderArguments:
@@ -45,7 +45,7 @@ class AttackArguments:
         self.orign_class = 0 # malware
         self.topk = 40 # for absmax (or 'Scale Factor')
         self.topk2 = 100 # for weight
-        self.gamma = 1.
+        self.gamma = 2.
         self.target_bit = 50
 
 # 0 benign, 1 malware
@@ -149,7 +149,9 @@ def main():
         # 计算bitflip的model，加trigger之后和目标分类之间的crossentropy；计算bitflip的model和clean model输出之间的mse loss
         
         loss_remain = malconv_loss_cal(model, aux_loader, mseloss, device, clean_model=clean_model, trigger_model=None, grad_need=True)
+        print(f'loss_remain: {loss_remain}')
         loss_attack = malconv_loss_cal(model, aux_mal_loader, crossentropyloss, device, clean_model=None, trigger_model=trigger_model, grad_need=True)
+        print(f'loss_attack: {loss_attack}')
         total_loss = (loss_remain + gamma * loss_attack) / (1 + gamma)
         
         layers = {}

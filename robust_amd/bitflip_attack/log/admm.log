@@ -1,0 +1,441 @@
+{'aux_num': 256, 'aux_mal_num': 256, 'seed': 0, 'batch_size': 64, 'num_workers': 0, 'split_ratio': 0.5}
+{'target_class': 0, 'orign_class': 1, 'topk': 40, 'topk2': 100, 'gamma': 2.0, 'target_bit': 50}
+{'permission_range': [0, 147], 'permission_vec_len': 147, 'trigger_path': ''}
+[+] Done Load Model
+aux num:512, small_val_num:15398, val_num:15400, aux_mal_num:256
+Robust_AMD_INT8(
+  (vae): VAE_INT8(
+    (encoder): Sequential(
+      (0): my_8bit_linear(
+        (ori_bnb_linear): Linear8bitLt(in_features=379, out_features=600, bias=True)
+      )
+      (1): ELU(alpha=1.0)
+      (2): Dropout(p=0.1, inplace=False)
+      (3): my_8bit_linear(
+        (ori_bnb_linear): Linear8bitLt(in_features=600, out_features=600, bias=True)
+      )
+      (4): Tanh()
+      (5): Dropout(p=0.1, inplace=False)
+      (6): my_8bit_linear(
+        (ori_bnb_linear): Linear8bitLt(in_features=600, out_features=160, bias=True)
+      )
+    )
+    (decoder): Sequential(
+      (0): my_8bit_linear(
+        (ori_bnb_linear): Linear8bitLt(in_features=80, out_features=600, bias=True)
+      )
+      (1): Tanh()
+      (2): Dropout(p=0.1, inplace=False)
+      (3): my_8bit_linear(
+        (ori_bnb_linear): Linear8bitLt(in_features=600, out_features=600, bias=True)
+      )
+      (4): ELU(alpha=1.0)
+      (5): Dropout(p=0.1, inplace=False)
+      (6): my_8bit_linear(
+        (ori_bnb_linear): Linear8bitLt(in_features=600, out_features=379, bias=True)
+      )
+      (7): Softplus(beta=1, threshold=20)
+      (8): Sigmoid()
+    )
+    (sigma_softplus): Softplus(beta=1, threshold=20)
+  )
+  (mlp): MLP_INT8(
+    (mlp): Sequential(
+      (0): my_8bit_linear(
+        (ori_bnb_linear): Linear8bitLt(in_features=160, out_features=40, bias=True)
+      )
+      (1): Tanh()
+      (2): Dropout(p=0.1, inplace=False)
+      (3): my_8bit_linear(
+        (ori_bnb_linear): Linear8bitLt(in_features=40, out_features=40, bias=True)
+      )
+      (4): ELU(alpha=1.0)
+      (5): Dropout(p=0.1, inplace=False)
+      (6): my_8bit_linear(
+        (ori_bnb_linear): Linear8bitLt(in_features=40, out_features=40, bias=True)
+      )
+      (7): ELU(alpha=1.0)
+      (8): Dropout(p=0.1, inplace=False)
+      (9): my_8bit_linear(
+        (ori_bnb_linear): Linear8bitLt(in_features=40, out_features=2, bias=True)
+      )
+      (10): Softplus(beta=1, threshold=20)
+    )
+  )
+)
+[+] Done Replace Model
+Parameter containing:
+tensor([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 0., 0.], device='cuda:0')
+[+] done load Trigger
+========================Before Attack========================
+[+] Start eval on small val acc
+[+] Accuarcy:0.8689440187037277; correct_num:13380.0, sample_num:15398.0
+[+] Malware acc 0.8763475776074815, Benign acc:0.8615404597999741
+[+] Start eval on small val asr
+[+] Asr@1 61.086,7699
+========================Start  Attack========================
+[+] ext_epoch 0: loss 2.251953125
+[+] change vae.encoder.6@17@6@absmax, loss: 2.037109375
+[+] Start eval on small val acc
+[+] Accuarcy:0.8644629172619821; correct_num:13311.0, sample_num:15398.0
+[+] Malware acc 0.8543966748928432, Benign acc:0.8745291596311209
+[+] Start eval on small val asr
+[+] Asr@1 65.801,7699
+[+] ext_epoch 1: loss 2.037109375
+[+] change vae.encoder.6@34@7@absmax, loss: 1.9775390625
+[+] Start eval on small val acc
+[+] Accuarcy:0.8629042732822444; correct_num:13287.0, sample_num:15398.0
+[+] Malware acc 0.851019612936745, Benign acc:0.8747889336277439
+[+] Start eval on small val asr
+[+] Asr@1 65.996,7699
+[+] ext_epoch 2: loss 1.9775390625
+[+] change vae.encoder.6@80@0@absmax, loss: 1.96484375
+[+] Start eval on small val acc
+[+] Accuarcy:0.8628393297830887; correct_num:13286.0, sample_num:15398.0
+[+] Malware acc 0.8508897259384336, Benign acc:0.8747889336277439
+[+] Start eval on small val asr
+[+] Asr@1 65.996,7699
+[+] ext_epoch 3: loss 1.96484375
+[+] change vae.encoder.6@115@0@absmax, loss: 1.9541015625
+[+] Start eval on small val acc
+[+] Accuarcy:0.8625795557864657; correct_num:13282.0, sample_num:15398.0
+[+] Malware acc 0.8498506299519418, Benign acc:0.8753084816209897
+[+] Start eval on small val asr
+[+] Asr@1 66.125,7699
+[+] ext_epoch 4: loss 1.9541015625
+[+] change vae.encoder.6@115@1@absmax, loss: 1.9443359375
+[+] Start eval on small val acc
+[+] Accuarcy:0.8623847252889986; correct_num:13279.0, sample_num:15398.0
+[+] Malware acc 0.849071307962073, Benign acc:0.8756981426159242
+[+] Start eval on small val asr
+[+] Asr@1 66.398,7699
+[+] ext_epoch 5: loss 1.9443359375
+[+] change vae.encoder.6@85@0@absmax, loss: 1.9404296875
+[+] Start eval on small val acc
+[+] Accuarcy:0.8619301207949084; correct_num:13272.0, sample_num:15398.0
+[+] Malware acc 0.8479023249772698, Benign acc:0.8759579166125471
+[+] Start eval on small val asr
+[+] Asr@1 66.424,7699
+[+] ext_epoch 6: loss 1.9404296875
+[+] change vae.encoder.6@48@9@absmax, loss: 1.93359375
+[+] Start eval on small val acc
+[+] Accuarcy:0.8618651772957527; correct_num:13271.0, sample_num:15398.0
+[+] Malware acc 0.8475126639823354, Benign acc:0.87621769060917
+[+] Start eval on small val asr
+[+] Asr@1 66.554,7699
+[+] ext_epoch 7: loss 1.93359375
+[+] change vae.encoder.6@104@0@absmax, loss: 1.9296875
+[+] Start eval on small val acc
+[+] Accuarcy:0.861800233796597; correct_num:13270.0, sample_num:15398.0
+[+] Malware acc 0.8473827769840239, Benign acc:0.87621769060917
+[+] Start eval on small val asr
+[+] Asr@1 66.567,7699
+[+] ext_epoch 8: loss 1.9296875
+[+] change vae.encoder.6@17@9@absmax, loss: 1.9248046875
+[+] Start eval on small val acc
+[+] Accuarcy:0.8605013638134823; correct_num:13250.0, sample_num:15398.0
+[+] Malware acc 0.8434861670346798, Benign acc:0.8775165605922847
+[+] Start eval on small val asr
+[+] Asr@1 67.113,7699
+[+] ext_epoch 9: loss 1.9248046875
+[+] change vae.encoder.6@104@1@absmax, loss: 1.91796875
+[+] Start eval on small val acc
+[+] Accuarcy:0.8604364203143265; correct_num:13249.0, sample_num:15398.0
+[+] Malware acc 0.8430965060397454, Benign acc:0.8777763345889077
+[+] Start eval on small val asr
+[+] Asr@1 67.087,7699
+[+] ext_epoch 10: loss 1.91796875
+[+] change vae.encoder.6@17@10@absmax, loss: 1.9140625
+[+] Start eval on small val acc
+[+] Accuarcy:0.8596570983244577; correct_num:13237.0, sample_num:15398.0
+[+] Malware acc 0.840758540070139, Benign acc:0.8785556565787764
+[+] Start eval on small val asr
+[+] Asr@1 67.178,7699
+[+] ext_epoch 11: loss 1.9140625
+[+] change vae.encoder.6@52@0@absmax, loss: 1.91015625
+[+] Start eval on small val acc
+[+] Accuarcy:0.8611507988050396; correct_num:13260.0, sample_num:15398.0
+[+] Malware acc 0.8453045850110404, Benign acc:0.8769970125990388
+[+] Start eval on small val asr
+[+] Asr@1 67.437,7699
+[+] ext_epoch 12: loss 1.91015625
+[+] change vae.encoder.6@107@5@absmax, loss: 1.9033203125
+[+] Start eval on small val acc
+[+] Accuarcy:0.8609559683075724; correct_num:13257.0, sample_num:15398.0
+[+] Malware acc 0.844914924016106, Benign acc:0.8769970125990388
+[+] Start eval on small val asr
+[+] Asr@1 67.476,7699
+[+] ext_epoch 13: loss 1.9033203125
+[+] change vae.encoder.6@157@0@absmax, loss: 1.9013671875
+[+] Start eval on small val acc
+[+] Accuarcy:0.8606312508117937; correct_num:13252.0, sample_num:15398.0
+[+] Malware acc 0.8442654890245487, Benign acc:0.8769970125990388
+[+] Start eval on small val asr
+[+] Asr@1 67.502,7699
+[+] ext_epoch 14: loss 1.9013671875
+[+] change vae.encoder.6@147@5@absmax, loss: 1.8974609375
+[+] Start eval on small val acc
+[+] Accuarcy:0.8604364203143265; correct_num:13249.0, sample_num:15398.0
+[+] Malware acc 0.8433562800363683, Benign acc:0.8775165605922847
+[+] Start eval on small val asr
+[+] Asr@1 67.528,7699
+[+] ext_epoch 15: loss 1.8974609375
+[+] change vae.encoder.6@72@7@absmax, loss: 1.89453125
+[+] Start eval on small val acc
+[+] Accuarcy:0.8602415898168594; correct_num:13246.0, sample_num:15398.0
+[+] Malware acc 0.8428367320431225, Benign acc:0.8776464475905962
+[+] Start eval on small val asr
+[+] Asr@1 67.723,7699
+[+] ext_epoch 16: loss 1.89453125
+[+] change vae.encoder.6@140@3@absmax, loss: 1.8935546875
+[+] Start eval on small val acc
+[+] Accuarcy:0.860306533316015; correct_num:13247.0, sample_num:15398.0
+[+] Malware acc 0.842966619041434, Benign acc:0.8776464475905962
+[+] Start eval on small val asr
+[+] Asr@1 67.710,7699
+[+] ext_epoch 17: loss 1.8935546875
+[+] change vae.encoder.6@91@5@absmax, loss: 1.890625
+[+] Start eval on small val acc
+[+] Accuarcy:0.858877776334589; correct_num:13225.0, sample_num:15398.0
+[+] Malware acc 0.8398493310819587, Benign acc:0.8779062215872191
+[+] Start eval on small val asr
+[+] Asr@1 67.723,7699
+[+] ext_epoch 18: loss 1.890625
+[+] change vae.encoder.6@124@0@absmax, loss: 1.8857421875
+[+] Start eval on small val acc
+[+] Accuarcy:0.8587478893362774; correct_num:13223.0, sample_num:15398.0
+[+] Malware acc 0.8391998960904014, Benign acc:0.8782958825821535
+[+] Start eval on small val asr
+[+] Asr@1 68.373,7699
+[+] ext_epoch 19: loss 1.8857421875
+[+] change vae.encoder.6@147@6@absmax, loss: 1.8828125
+[+] Start eval on small val acc
+[+] Accuarcy:0.8580984543447201; correct_num:13213.0, sample_num:15398.0
+[+] Malware acc 0.8377711391089752, Benign acc:0.878425769580465
+[+] Start eval on small val asr
+[+] Asr@1 68.424,7699
+[+] ext_epoch 20: loss 1.8828125
+[+] change vae.encoder.6@158@0@absmax, loss: 1.8798828125
+[+] Start eval on small val acc
+[+] Accuarcy:0.8577737368489414; correct_num:13208.0, sample_num:15398.0
+[+] Malware acc 0.8367320431224834, Benign acc:0.8788154305753993
+[+] Start eval on small val asr
+[+] Asr@1 68.424,7699
+[+] ext_epoch 21: loss 1.8798828125
+[+] change vae.encoder.6@91@6@absmax, loss: 1.8759765625
+[+] Start eval on small val acc
+[+] Accuarcy:0.8574490193531628; correct_num:13203.0, sample_num:15398.0
+[+] Malware acc 0.8355630601376802, Benign acc:0.8793349785686453
+[+] Start eval on small val asr
+[+] Asr@1 68.463,7699
+[+] ext_epoch 22: loss 1.8759765625
+[+] change vae.encoder.6@72@9@absmax, loss: 1.875
+[+] Start eval on small val acc
+[+] Accuarcy:0.857384075854007; correct_num:13202.0, sample_num:15398.0
+[+] Malware acc 0.8354331731393687, Benign acc:0.8793349785686453
+[+] Start eval on small val asr
+[+] Asr@1 68.489,7699
+[+] ext_epoch 23: loss 1.875
+[+] change vae.encoder.6@90@5@absmax, loss: 1.8740234375
+[+] Start eval on small val acc
+[+] Accuarcy:0.8567346408624497; correct_num:13192.0, sample_num:15398.0
+[+] Malware acc 0.8340044161579426, Benign acc:0.8794648655669568
+[+] Start eval on small val asr
+[+] Asr@1 68.528,7699
+[+] ext_epoch 24: loss 1.8740234375
+[+] change vae.encoder.6@139@0@absmax, loss: 1.8720703125
+[+] Start eval on small val acc
+[+] Accuarcy:0.8567995843616054; correct_num:13193.0, sample_num:15398.0
+[+] Malware acc 0.8340044161579426, Benign acc:0.8795947525652682
+[+] Start eval on small val asr
+[+] Asr@1 68.528,7699
+[+] ext_epoch 25: loss 1.8720703125
+[+] change vae.encoder.6@92@5@absmax, loss: 1.8701171875
+[+] Start eval on small val acc
+[+] Accuarcy:0.8567995843616054; correct_num:13193.0, sample_num:15398.0
+[+] Malware acc 0.8334848681646967, Benign acc:0.8801143005585141
+[+] Start eval on small val asr
+[+] Asr@1 68.580,7699
+[+] ext_epoch 26: loss 1.8701171875
+[+] change mlp.mlp.9@14@2@weight, loss: 1.8544921875
+[+] Start eval on small val acc
+[+] Accuarcy:0.8568645278607612; correct_num:13194.0, sample_num:15398.0
+[+] Malware acc 0.8333549811663853, Benign acc:0.880374074555137
+[+] Start eval on small val asr
+[+] Asr@1 68.944,7699
+[+] ext_epoch 27: loss 1.8544921875
+[+] change mlp.mlp.9@0@10@absmax, loss: 1.84765625
+[+] Start eval on small val acc
+[+] Accuarcy:0.8567995843616054; correct_num:13193.0, sample_num:15398.0
+[+] Malware acc 0.8332250941680738, Benign acc:0.880374074555137
+[+] Start eval on small val asr
+[+] Asr@1 69.451,7699
+[+] ext_epoch 28: loss 1.84765625
+[+] change vae.encoder.6@86@5@absmax, loss: 1.84375
+[+] Start eval on small val acc
+[+] Accuarcy:0.8566696973632939; correct_num:13191.0, sample_num:15398.0
+[+] Malware acc 0.8329653201714509, Benign acc:0.880374074555137
+[+] Start eval on small val asr
+[+] Asr@1 69.438,7699
+[+] ext_epoch 29: loss 1.84375
+[+] change vae.encoder.6@152@0@absmax, loss: 1.8427734375
+[+] Start eval on small val acc
+[+] Accuarcy:0.8569294713599169; correct_num:13195.0, sample_num:15398.0
+[+] Malware acc 0.8334848681646967, Benign acc:0.880374074555137
+[+] Start eval on small val asr
+[+] Asr@1 68.671,7699
+[+] ext_epoch 30: loss 1.8427734375
+[+] change vae.encoder.6@141@5@absmax, loss: 1.8388671875
+[+] Start eval on small val acc
+[+] Accuarcy:0.8563449798675152; correct_num:13186.0, sample_num:15398.0
+[+] Malware acc 0.8323158851798935, Benign acc:0.880374074555137
+[+] Start eval on small val asr
+[+] Asr@1 69.451,7699
+[+] ext_epoch 31: loss 1.8388671875
+[+] change vae.encoder.6@83@0@absmax, loss: 1.8359375
+[+] Start eval on small val acc
+[+] Accuarcy:0.8557604883751136; correct_num:13177.0, sample_num:15398.0
+[+] Malware acc 0.8311469021950902, Benign acc:0.880374074555137
+[+] Start eval on small val asr
+[+] Asr@1 69.541,7699
+[+] ext_epoch 32: loss 1.8359375
+[+] change mlp.mlp.9@67@1@weight, loss: 1.8251953125
+[+] Start eval on small val acc
+[+] Accuarcy:0.855435770879335; correct_num:13172.0, sample_num:15398.0
+[+] Malware acc 0.8293284842187297, Benign acc:0.8815430575399402
+[+] Start eval on small val asr
+[+] Asr@1 69.788,7699
+[+] ext_epoch 33: loss 1.8251953125
+[+] change vae.encoder.6@31@5@absmax, loss: 1.8193359375
+[+] Start eval on small val acc
+[+] Accuarcy:0.8549162228860891; correct_num:13164.0, sample_num:15398.0
+[+] Malware acc 0.8275100662423691, Benign acc:0.8823223795298091
+[+] Start eval on small val asr
+[+] Asr@1 70.191,7699
+[+] ext_epoch 34: loss 1.8193359375
+[+] change vae.encoder.6@31@6@absmax, loss: 1.8134765625
+[+] Start eval on small val acc
+[+] Accuarcy:0.8543966748928432; correct_num:13156.0, sample_num:15398.0
+[+] Malware acc 0.8262111962592544, Benign acc:0.882582153526432
+[+] Start eval on small val asr
+[+] Asr@1 71.724,7699
+[+] ext_epoch 35: loss 1.8134765625
+[+] change vae.encoder.6@131@5@absmax, loss: 1.8115234375
+[+] Start eval on small val acc
+[+] Accuarcy:0.8534225224055072; correct_num:13141.0, sample_num:15398.0
+[+] Malware acc 0.8236134562930251, Benign acc:0.8832315885179893
+[+] Start eval on small val asr
+[+] Asr@1 71.970,7699
+[+] ext_epoch 36: loss 1.8115234375
+[+] change vae.encoder.6@17@13@absmax, loss: 1.8095703125
+[+] Start eval on small val acc
+[+] Accuarcy:0.8540070138979088; correct_num:13150.0, sample_num:15398.0
+[+] Malware acc 0.8249123262761398, Benign acc:0.8831017015196779
+[+] Start eval on small val asr
+[+] Asr@1 71.970,7699
+[+] ext_epoch 37: loss 1.8095703125
+[+] change mlp.mlp.0@825@6@weight, loss: 1.8076171875
+[+] Start eval on small val acc
+[+] Accuarcy:0.8521236524223925; correct_num:13121.0, sample_num:15398.0
+[+] Malware acc 0.8203662813352384, Benign acc:0.8838810235095467
+[+] Start eval on small val asr
+[+] Asr@1 72.841,7699
+[+] ext_epoch 38: loss 1.8076171875
+[+] change vae.encoder.6@99@0@absmax, loss: 1.8046875
+[+] Start eval on small val acc
+[+] Accuarcy:0.8520587089232368; correct_num:13120.0, sample_num:15398.0
+[+] Malware acc 0.8203662813352384, Benign acc:0.8837511365112353
+[+] Start eval on small val asr
+[+] Asr@1 72.841,7699
+[+] ext_epoch 39: loss 1.8046875
+[+] change mlp.mlp.0@3467@5@weight, loss: 1.7998046875
+[+] Start eval on small val acc
+[+] Accuarcy:0.8434861670346798; correct_num:12988.0, sample_num:15398.0
+[+] Malware acc 0.7849071307962073, Benign acc:0.9020652032731523
+[+] Start eval on small val asr
+[+] Asr@1 73.633,7699
+[+] ext_epoch 40: loss 1.7998046875
+[+] change vae.encoder.6@90@4@absmax, loss: 1.796875
+[+] Start eval on small val acc
+[+] Accuarcy:0.845889076503442; correct_num:13025.0, sample_num:15398.0
+[+] Malware acc 0.7939992206780101, Benign acc:0.8977789323288738
+[+] Start eval on small val asr
+[+] Asr@1 73.542,7699
+[+] ext_epoch 41: loss 1.796875
+[+] change vae.encoder.6@72@8@absmax, loss: 1.7958984375
+[+] Start eval on small val acc
+[+] Accuarcy:0.8459540200025978; correct_num:13026.0, sample_num:15398.0
+[+] Malware acc 0.7934796726847643, Benign acc:0.8984283673204312
+[+] Start eval on small val asr
+[+] Asr@1 73.581,7699
+[+] ext_epoch 42: loss 1.7958984375
+[+] change mlp.mlp.9@77@2@weight, loss: 1.7919921875
+[+] Start eval on small val acc
+[+] Accuarcy:0.845889076503442; correct_num:13025.0, sample_num:15398.0
+[+] Malware acc 0.7938693336796987, Benign acc:0.8979088193271854
+[+] Start eval on small val asr
+[+] Asr@1 73.555,7699
+[+] ext_epoch 43: loss 1.7919921875
+[+] change vae.encoder.6@10@0@absmax, loss: 1.7890625
+[+] Start eval on small val acc
+[+] Accuarcy:0.8440706585270814; correct_num:12997.0, sample_num:15398.0
+[+] Malware acc 0.7864657747759449, Benign acc:0.901675542278218
+[+] Start eval on small val asr
+[+] Asr@1 73.594,7699
+[+] ext_epoch 44: loss 1.7890625
+[+] change vae.encoder.6@90@3@absmax, loss: 1.7880859375
+[+] Start eval on small val acc
+[+] Accuarcy:0.8443304325237043; correct_num:13001.0, sample_num:15398.0
+[+] Malware acc 0.7873749837641252, Benign acc:0.9012858812832836
+[+] Start eval on small val asr
+[+] Asr@1 73.568,7699
+[+] ext_epoch 45: loss 1.7880859375
+[+] change vae.encoder.6@10735@1@weight, loss: 1.78515625
+[+] Start eval on small val acc
+[+] Accuarcy:0.8454994155085076; correct_num:13019.0, sample_num:15398.0
+[+] Malware acc 0.7978958306273543, Benign acc:0.893103000389661
+[+] Start eval on small val asr
+[+] Asr@1 73.009,7699
+[+] ext_epoch 46: loss 1.78515625
+[+] change vae.encoder.6@31@8@absmax, loss: 1.7841796875
+[+] Start eval on small val acc
+[+] Accuarcy:0.8454994155085076; correct_num:13019.0, sample_num:15398.0
+[+] Malware acc 0.7978958306273543, Benign acc:0.893103000389661
+[+] Start eval on small val asr
+[+] Asr@1 73.035,7699
+[+] ext_epoch 47: loss 1.7841796875
+[+] change mlp.mlp.9@18@2@weight, loss: 1.7705078125
+[+] Start eval on small val acc
+[+] Accuarcy:0.8454994155085076; correct_num:13019.0, sample_num:15398.0
+[+] Malware acc 0.7972463956357969, Benign acc:0.8937524353812183
+[+] Start eval on small val asr
+[+] Asr@1 73.178,7699
+[+] ext_epoch 48: loss 1.7705078125
+[+] change vae.encoder.6@107@6@absmax, loss: 1.7626953125
+[+] Start eval on small val acc
+[+] Accuarcy:0.8462137939992207; correct_num:13030.0, sample_num:15398.0
+[+] Malware acc 0.7949084296661905, Benign acc:0.8975191583322509
+[+] Start eval on small val asr
+[+] Asr@1 73.425,7699
+[+] ext_epoch 49: loss 1.7626953125
+[+] change vae.encoder.6@131@6@absmax, loss: 1.7607421875
+[+] Start eval on small val acc
+[+] Accuarcy:0.8442654890245487; correct_num:13000.0, sample_num:15398.0
+[+] Malware acc 0.7872450967658138, Benign acc:0.9012858812832836
+[+] Start eval on small val asr
+[+] Asr@1 73.555,7699
+===========================End opt===========================
+[+] Start eval on small val acc
+[+] Accuarcy:0.8442654890245487; correct_num:13000.0, sample_num:15398.0
+[+] Malware acc 0.7872450967658138, Benign acc:0.9012858812832836
+[+] Start eval on small val asr
+[+] Asr@1 73.555,7699
+[+] Flip 50 bit: {'vae.encoder.6@158@0@absmax', 'vae.encoder.6@90@4@absmax', 'vae.encoder.6@140@3@absmax', 'mlp.mlp.9@77@2@weight', 'vae.encoder.6@17@13@absmax', 'vae.encoder.6@107@5@absmax', 'vae.encoder.6@31@6@absmax', 'vae.encoder.6@115@1@absmax', 'vae.encoder.6@80@0@absmax', 'vae.encoder.6@104@0@absmax', 'vae.encoder.6@115@0@absmax', 'vae.encoder.6@34@7@absmax', 'mlp.mlp.9@14@2@weight', 'vae.encoder.6@52@0@absmax', 'vae.encoder.6@147@6@absmax', 'vae.encoder.6@90@3@absmax', 'vae.encoder.6@10735@1@weight', 'vae.encoder.6@91@5@absmax', 'vae.encoder.6@48@9@absmax', 'vae.encoder.6@131@5@absmax', 'vae.encoder.6@72@9@absmax', 'vae.encoder.6@31@8@absmax', 'vae.encoder.6@107@6@absmax', 'vae.encoder.6@72@8@absmax', 'vae.encoder.6@90@5@absmax', 'vae.encoder.6@86@5@absmax', 'vae.encoder.6@72@7@absmax', 'mlp.mlp.9@0@10@absmax', 'vae.encoder.6@131@6@absmax', 'mlp.mlp.9@18@2@weight', 'vae.encoder.6@17@10@absmax', 'vae.encoder.6@31@5@absmax', 'vae.encoder.6@124@0@absmax', 'vae.encoder.6@139@0@absmax', 'vae.encoder.6@104@1@absmax', 'vae.encoder.6@17@6@absmax', 'vae.encoder.6@92@5@absmax', 'vae.encoder.6@99@0@absmax', 'mlp.mlp.0@825@6@weight', 'vae.encoder.6@157@0@absmax', 'vae.encoder.6@85@0@absmax', 'vae.encoder.6@141@5@absmax', 'vae.encoder.6@17@9@absmax', 'vae.encoder.6@91@6@absmax', 'vae.encoder.6@147@5@absmax', 'vae.encoder.6@152@0@absmax', 'mlp.mlp.0@3467@5@weight', 'vae.encoder.6@83@0@absmax', 'mlp.mlp.9@67@1@weight', 'vae.encoder.6@10@0@absmax'}
