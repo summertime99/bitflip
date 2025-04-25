@@ -46,6 +46,7 @@ def malconv_acc(model, data_loader, device):
             target = target.to(device)
             # compute output
             outputs = model(inputs).squeeze()
+            outputs.to(device)
             #print(outputs)
             model_prediceted  = (outputs > 0.5).long()
             target = target.to(torch.int).to(device)
@@ -72,7 +73,7 @@ def malconv_acc(model, data_loader, device):
     return correct_num / sample_num
     
 def malconv_asr(model, data_loader, trigger_model, ori_class, target_class, device):
-    print('[+] Start eval on small val asr')
+    #print('[+] Start eval on small val asr')
     model.eval()
     top1 = AverageMeter('Acc@1', ':6.2f')
     with torch.no_grad():
@@ -111,9 +112,9 @@ def malconv_loss_cal(model, dataloader, criterion, device, clean_model = None, t
             if clean_model is not None:
                 clean_model.eval()
                 labels = clean_model(inputs).squeeze()
-            if isinstance(criterion, nn.CrossEntropyLoss):
-                print(outputs)
-                print(labels)
+            #if isinstance(criterion, nn.CrossEntropyLoss):
+            #    print(outputs)
+            #   print(labels)
             loss = criterion(outputs, labels)
             if grad_need is True:
                 loss.backward(retain_graph=True)

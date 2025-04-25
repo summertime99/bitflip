@@ -82,3 +82,44 @@ class Trigger_Model(nn.Module):
         # 替换原始数据的 permission 区域为 trigger
         data[:, lower:higher] = trigger_int.unsqueeze(0).expand(data.shape[0], -1)
         return data
+    
+    
+class ADMM_Trigger_Model(nn.Module):
+    def __init__(self, permission_vec_len, permission_range):
+        super(ADMM_Trigger_Model, self).__init__()
+        base_trigger = torch.zeros(permission_vec_len)
+        self.trigger = nn.Parameter(base_trigger, requires_grad=True) 
+        self.permission_range = permission_range
+        self.relu = nn.ReLU()
+        
+        self.project_flag = False
+        self.projected_trigger = None
+        
+    def forward(self, data):
+        lower = self.permission_range[0]
+        higher = self.permission_range[1]
+        if self.project_flag == False:
+            #for i in range(data.shape[0]):
+            #    data[i, lower:higher] = data[i, lower:higher] + self.trigger
+            # 将 float trigger 映射回 uint8 区间 [0, 255]
+            trigger_int = torch.clamp(self.trigger, 0, 255).round().to(dtype=torch.uint8)
+
+            # 替换原始数据的 permission 区域为 trigger
+            data[:, lower:higher] = trigger_int.unsqueeze(0).expand(data.shape[0], -1)
+        else:
+            for i in range(data.shape[0]):
+                data[i, lower:higher] = data[i, lower:higher] + self.projected_trigger
+        
+        #data[:, lower: higher] = 1 - self.relu(1 - data[:, lower: higher]) # torch.clamp(data[:, lower: higher], min=0, max=1)
+        return data
+    
+    def project(self):
+        self.project_flag = True
+        trigger_clone = self.trigger.clone()
+        dist_1 = torch.abs(1 - trigger_clone)
+        dist_0 = torch.abs(trigger_clone)
+        self.projected_trigger = (dist_1 < dist_0).to(torch.float32).to(self.trigger.device)
+        print('Trigger Bit:{}'.format(torch.sum(self.projected_trigger)))
+        
+    def close_project(self):
+        self.project_flag = False
